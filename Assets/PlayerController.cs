@@ -40,12 +40,31 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(Vector3.up * mouseX);
 
         // 跳跃
-        if (Input.GetKeyDown(KeyCode.Space) )
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isGrounded = false; // 跳跃后设置为不在地面上
+            isGrounded= false;
+            //OnTriggerStay(other);
         }
 
 
     }
+
+    void OnTriggerStay(Collider other)
+    {
+        //Debug.Log("hello!");
+
+        if (other.transform.tag == "Ground")
+        {
+            isGrounded = true;
+            Debug.Log("Grounded");
+        }
+        else
+        {
+            isGrounded = false;
+            Debug.Log("Not Grounded!");
+        }
+    }
+
+
 }
