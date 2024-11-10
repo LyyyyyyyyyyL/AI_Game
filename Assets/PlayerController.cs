@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
         if (other.transform.tag == "Ground")
         {
             isGrounded = true;
-            Debug.Log("Grounded");
+            //Debug.Log("Grounded");
         }
         else
         {
