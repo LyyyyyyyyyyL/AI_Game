@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\13079\\My project (2)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\gun\\gun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|c:\\users\\13079\\my project (2)\\assets\\gun\\gun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\gun\\gun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|c:\\users\\13079\\my project (2)\\assets\\voice\\shound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\voice\\shound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\gun\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,24 +22,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "shound.cs",
-              "DocumentMoniker": "C:\\Users\\13079\\My project (2)\\Assets\\Voice\\shound.cs",
-              "RelativeDocumentMoniker": "Assets\\Voice\\shound.cs",
-              "ToolTip": "C:\\Users\\13079\\My project (2)\\Assets\\Voice\\shound.cs",
-              "RelativeToolTip": "Assets\\Voice\\shound.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T22:10:43.231Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Bullet.cs",
               "DocumentMoniker": "C:\\Users\\13079\\My project (2)\\Assets\\Gun\\Bullet.cs",
               "RelativeDocumentMoniker": "Assets\\Gun\\Bullet.cs",
@@ -51,8 +34,7 @@
               "RelativeToolTip": "Assets\\Gun\\Bullet.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAxwBQAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T13:44:59.005Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T13:44:59.005Z"
             },
             {
               "$type": "Document",
@@ -62,14 +44,14 @@
               "RelativeDocumentMoniker": "Assets\\Gun\\Gun.cs",
               "ToolTip": "C:\\Users\\13079\\My project (2)\\Assets\\Gun\\Gun.cs",
               "RelativeToolTip": "Assets\\Gun\\Gun.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAA+wDAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAswDAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T13:28:14.796Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\13079\\My project (2)\\Assets\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerController.cs",
@@ -77,8 +59,7 @@
               "RelativeToolTip": "Assets\\PlayerController.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAAADsAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T14:20:49.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T14:20:49.197Z"
             }
           ]
         }
