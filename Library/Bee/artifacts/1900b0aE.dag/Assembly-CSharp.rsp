@@ -355,6 +355,8 @@
 "Assets/enemy/panghu_logic.cs"
 "Assets/Gun/Bullet.cs"
 "Assets/Gun/Gun.cs"
+"Assets/health/EnemyHealth.cs"
+"Assets/health/HPctroller.cs"
 "Assets/PlayerController.cs"
 -langversion:9.0
 /deterministic

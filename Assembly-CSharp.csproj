@@ -61,8 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\PlayerController.cs" />
+    <Compile Include="Assets\health\HPctroller.cs" />
     <Compile Include="Assets\Gun\Bullet.cs" />
     <Compile Include="Assets\enemy\panghu_logic.cs" />
+    <Compile Include="Assets\health\EnemyHealth.cs" />
     <Compile Include="Assets\Gun\Gun.cs" />
   </ItemGroup>
   <ItemGroup>

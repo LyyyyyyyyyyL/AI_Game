@@ -62,9 +62,20 @@ public class PlayerController : MonoBehaviour
         else
         {
             isGrounded = false;
-            Debug.Log("Not Grounded!");
+            //Debug.Log("Not Grounded!");
         }
     }
+
+
+    void OnCollisionEnter(Collision other)
+    {
+     //   if (other.gameObject.CompareTag("Player"))
+        {
+            Rigidbody rbdy = other.gameObject.GetComponent<Rigidbody>();
+            Debug.Log("running");
+        }
+    }
+
 
 
 }

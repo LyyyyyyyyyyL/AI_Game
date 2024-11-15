@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1627623808882792019}
   - component: {fileID: 5413142097145261703}
   - component: {fileID: -5912630994107562012}
+  - component: {fileID: 102304801449253188}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Untagged
@@ -101,11 +102,11 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.54
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5413142097145261703
 Rigidbody:
@@ -146,3 +147,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2254b2977b376c4c85deaa417709e4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 10
+--- !u!135 &102304801449253188
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7488057387314243336}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
