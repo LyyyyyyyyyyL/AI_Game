@@ -1,96 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public enum EnemyState
+public class EnemyAI : MonoBehaviour
 {
-    Idle,
-    Patrol,
-    Chase,
-    Attack,
-    Dead,
-    Hurt,
-    Evade,
-    Cast,
-    Alert
-}
+    public string targetTag = "Player";  // 用来寻找目标的标签
+    public float moveSpeed = 3f;  // 敌人追击速度
+    private GameObject target;  // 目标对象（玩家）
 
-
-public class panghu_logic : MonoBehaviour
-{
-    public EnemyState currentState = EnemyState.Patrol;
-
-    public float moveSpeed = 2f;  // 控制移动速度
-    public float moveDistance = 3f; // 移动的最大距离
-    private Vector3 initialPosition; // 初始位置
-    public AudioSource audioSource; // 用来播放声音的 AudioSource
-    public AudioClip patrolSound; // 待机时播放的声音
-
-    private bool isMovingForward = true;  // 用来控制前后移动的方向
-
-    // Start is called before the first frame update
     void Start()
     {
-        initialPosition = transform.position;  // 记录初始位置
-        audioSource = GetComponent<AudioSource>();  // 获取 AudioSource 组件
-        audioSource.loop = true;  // 设置音效循环播放
-        audioSource.clip = patrolSound;  // 设置待机音效
-        audioSource.Play();  // 播放音效
+        // 在开始时寻找场景中标记为 "Player" 的对象
+        target = GameObject.FindWithTag(targetTag);
+
+        if (target == null)
+        {
+            Debug.LogWarning("No target with tag 'Player' found in the scene!");
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        switch (currentState)
+        if (target == null)
         {
-            case EnemyState.Idle:
-                // 执行待机行为
-
-                break;
-            case EnemyState.Patrol:
-                // 执行巡逻行为
-                PatrolBehavior();
-                break;
-            case EnemyState.Chase:
-                // 执行追踪行为
-
-                break;
-            case EnemyState.Attack:
-                // 执行攻击行为
-                break;
-            case EnemyState.Dead:
-                // 执行死亡行为
-                break;
-            case EnemyState.Hurt:
-                // 执行受伤行为
-                break;
-            case EnemyState.Alert:
-                // 执行警觉行为
-                break;
+            Debug.LogWarning("Target is not assigned or not found!");
+            return;
         }
 
-    }
+        Vector3 targetPosition = target.transform.position;
 
-    void PatrolBehavior()
-    {
-        // 让敌人前后移动
-        float movement = moveSpeed * Time.deltaTime;
+        // 计算敌人朝目标移动的方向
+        Vector3 direction = (targetPosition - transform.position).normalized;
 
-        if (isMovingForward)
-        {
-            transform.Translate(Vector3.forward * movement);  // 向前移动
-            if (Vector3.Distance(transform.position, initialPosition) >= moveDistance)
-            {
-                isMovingForward = false;  // 达到最大距离后改变方向
-            }
-        }
-        else
-        {
-            transform.Translate(Vector3.back * movement);  // 向后移动
-            if (Vector3.Distance(transform.position, initialPosition) <= 0.1f)
-            {
-                isMovingForward = true;  // 回到初始位置后改变方向
-            }
-        }
+        // 让敌人朝向目标（玩家）
+        Quaternion lookRotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);  // 平滑旋转
+
+        // 移动敌人朝目标移动
+        transform.Translate(direction * moveSpeed * Time.deltaTime, Space.World);
     }
 }

@@ -1316,10 +1316,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 1
-  moveSpeed: 1
-  moveDistance: 4
+  moveSpeed: 4
+  moveDistance: 20
+  initialPosition: {x: 0, y: 0, z: 0}
   audioSource: {fileID: 1631571658}
   patrolSound: {fileID: 8300000, guid: ac7dd6f70c4c2a04baa1421a207ca118, type: 3}
+  isMovingForward: 1
 --- !u!82 &1631571658
 AudioSource:
   m_ObjectHideFlags: 0
