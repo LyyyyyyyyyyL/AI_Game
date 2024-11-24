@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
      //   if (other.gameObject.CompareTag("Player"))
         {
             Rigidbody rbdy = other.gameObject.GetComponent<Rigidbody>();
-            Debug.Log("running");
+            //Debug.Log("running");
         }
     }
 

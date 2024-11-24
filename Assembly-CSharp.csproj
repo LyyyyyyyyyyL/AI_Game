@@ -63,9 +63,12 @@
     <Compile Include="Assets\PlayerController.cs" />
     <Compile Include="Assets\health\HPctroller.cs" />
     <Compile Include="Assets\Gun\Bullet.cs" />
-    <Compile Include="Assets\enemy\panghu_logic.cs" />
+    <Compile Include="Assets\enemy\BehabiorTree\BehaviorNode.cs" />
+    <Compile Include="Assets\enemy\BehabiorTree\PatrolBehavior.cs" />
+    <Compile Include="Assets\enemy\BehabiorTree\BehaviorManager.cs" />
     <Compile Include="Assets\health\EnemyHealth.cs" />
     <Compile Include="Assets\Gun\Gun.cs" />
+    <Compile Include="Assets\enemy\BehabiorTree\RunBehavior.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Art\Fonts\ApacheLicense2.0.txt" />
