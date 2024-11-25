@@ -216,6 +216,53 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &3121288415315098429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6917257273017016607}
+  - component: {fileID: 1225708246557604393}
+  m_Layer: 0
+  m_Name: DieBehaviorObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6917257273017016607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3121288415315098429}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 776155141924343659}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1225708246557604393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3121288415315098429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385082a6736c778498a07d1d9f19868c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 4391718013820517804}
+  destroyDelay: 4
+  rotationAngle: {x: 90, y: 0, z: 0}
 --- !u!1 &3127567768211299308
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,6 +590,7 @@ Transform:
   - {fileID: 3735211926277548181}
   - {fileID: 279223490457122007}
   - {fileID: 1545813176229828541}
+  - {fileID: 6917257273017016607}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &5929394144947323910
@@ -655,6 +703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 1049400476777155430}
   maxHealth: 100
+  currentHealth: 0
 --- !u!136 &2213101376141292396
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -692,6 +741,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrolBehavior: {fileID: 3561595236131429116}
   runBehavior: {fileID: 5645419881682559436}
+  dieBehavior: {fileID: 1225708246557604393}
+  EnemyHealth: {fileID: 2400777146217609983}
 --- !u!54 &6328015030538139204
 Rigidbody:
   m_ObjectHideFlags: 0

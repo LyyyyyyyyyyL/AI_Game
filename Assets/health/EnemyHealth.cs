@@ -5,7 +5,7 @@ public class EnemyHealth : MonoBehaviour
 {
     public Slider healthSlider;  // 绑定血条 Slider
     public float maxHealth = 100f;  // 最大血量
-    private float currentHealth;  // 当前血量
+    public float currentHealth;  // 当前血量
 
     void Start()
     {

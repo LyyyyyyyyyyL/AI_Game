@@ -358,6 +358,7 @@
 -analyzer:"D:/Unity/Unity/2022.3.45f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/enemy/BehabiorTree/BehaviorManager.cs"
 "Assets/enemy/BehabiorTree/BehaviorNode.cs"
+"Assets/enemy/BehabiorTree/DieBehavior.cs"
 "Assets/enemy/BehabiorTree/PatrolBehavior.cs"
 "Assets/enemy/BehabiorTree/RunBehavior.cs"
 "Assets/Gun/Bullet.cs"

@@ -6,6 +6,10 @@ public class BehaviorManager : MonoBehaviour
 
     [SerializeField] private BehaviorNode patrolBehavior; // 巡逻行为
     [SerializeField] private BehaviorNode runBehavior;    // 奔跑行为
+    [SerializeField] private BehaviorNode dieBehavior;    // 奔跑行为
+
+
+    [SerializeField] private EnemyHealth EnemyHealth;
 
     void Start()
     {
@@ -19,8 +23,21 @@ public class BehaviorManager : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("Enemy health is "+EnemyHealth.currentHealth);
         // 每帧运行当前行为
         currentBehavior?.Run();  // 调用当前行为的Run()方法
+
+        if (EnemyHealth != null && EnemyHealth.currentHealth <= 0)
+        {
+            // 切换到死亡行为
+            if (dieBehavior != null)
+            {
+                currentBehavior = dieBehavior;
+                Debug.Log("Enemy health is 0. Switching to DieBehavior.");
+                return; // 防止继续运行当前行为
+            }
+        }
+
     }
 
     private void OnCollisionEnter(Collision collision)
