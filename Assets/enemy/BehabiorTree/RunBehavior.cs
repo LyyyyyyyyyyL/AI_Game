@@ -1,26 +1,33 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class RunBehavior : BehaviorNode
 {
-    public GameObject enemy; // ĞèÒª¿ØÖÆµÄµĞÈË
-    public float runSpeed = 5f; // ×·ÖğËÙ¶È
-    public float rotationSpeed = 5f; // Ğı×ªËÙ¶È
-    private Transform enemyTransform; // ÓÃÀ´´æ´¢µĞÈËµÄ Transform
-    private Transform playerTransform; // ÓÃÀ´´æ´¢Íæ¼ÒµÄ Transform
+    public GameObject enemy; // éœ€è¦ç§»åŠ¨çš„æ•Œäºº
+    public float runSpeed = 5f; // å¤‡ç”¨è¿½èµ¶é€Ÿåº¦
+    public float rotationSpeed = 5f; // å¤‡ç”¨æ—‹è½¬é€Ÿåº¦
+    private Transform enemyTransform; // ç¼“å­˜æ•Œäººçš„ Transform
+    private Transform playerTransform; // ç¼“å­˜ç©å®¶çš„ Transform
+    private NavMeshAgent navMeshAgent; // è‡ªåŠ¨å¯»è·¯ç»„ä»¶
 
     void Start()
     {
-        // »ñÈ¡µĞÈËµÄ Transform ×é¼ş
+        // è·å–æ•Œäººçš„ Transform å’Œ NavMeshAgent
         if (enemy != null)
         {
             enemyTransform = enemy.transform;
+            navMeshAgent = enemy.GetComponent<NavMeshAgent>();
+            if (navMeshAgent == null)
+            {
+                Debug.LogError("NavMeshAgent component is missing from the enemy GameObject!");
+            }
         }
         else
         {
             Debug.LogError("Enemy GameObject not assigned!");
         }
 
-        // ²éÕÒÍæ¼Ò²¢»ñÈ¡Æä Transform ×é¼ş
+        // å°è¯•è·å–ç©å®¶çš„ Transform
         playerTransform = GameObject.FindGameObjectWithTag("Player")?.transform;
 
         if (playerTransform == null)
@@ -28,43 +35,45 @@ public class RunBehavior : BehaviorNode
             Debug.LogError("Player not found! Make sure the player has the 'Player' tag.");
         }
 
-        Debug.Log("Run Behavior started.");
+        Debug.Log("Run Behavior initialized.");
     }
 
     public override bool Run()
     {
-        // È·±£µĞÈËºÍÍæ¼Ò¶¼²»Îª¿Õ
+        // æ£€æŸ¥å¿…è¦æ¡ä»¶
         if (enemyTransform == null)
         {
             Debug.LogError("Enemy Transform is not assigned!");
-            return false; // Èç¹ûÃ»ÓĞµĞÈË£¬·µ»Ø false
+            return false;
         }
 
         if (playerTransform == null)
         {
             Debug.LogWarning("Player not found, enemy cannot run towards player.");
-            return false; // Èç¹ûÃ»ÓĞÍæ¼Ò£¬·µ»Ø false
+            return false;
         }
 
-        // ¼ÆËãµĞÈËºÍÍæ¼ÒÖ®¼äµÄ·½Ïò
-        Vector3 directionToPlayer = playerTransform.position - enemyTransform.position;
+        if (navMeshAgent != null)
+        {
+            // ä½¿ç”¨ NavMeshAgent è‡ªåŠ¨å¯»è·¯
+            navMeshAgent.speed = runSpeed;
+            navMeshAgent.angularSpeed = rotationSpeed * 100f; // è½¬æ¢ä¸ºè§’é€Ÿåº¦
+            navMeshAgent.destination = playerTransform.position;
 
-        // ÈÃµĞÈË³¯×ÅÍæ¼ÒÒÆ¶¯
-        enemyTransform.Translate(directionToPlayer.normalized * runSpeed * Time.deltaTime, Space.World);
+            // è¿”å›çŠ¶æ€ï¼Œæ ¹æ® NavMeshAgent æ˜¯å¦æ­£åœ¨ç§»åŠ¨ç¡®å®šè¿è¡ŒæˆåŠŸ
+            return !navMeshAgent.isStopped;
+        }
+        else
+        {
+            // å¦‚æœ NavMeshAgent ä¸å¯ç”¨ï¼Œä½¿ç”¨å¤‡ç”¨é€»è¾‘
+            Vector3 directionToPlayer = playerTransform.position - enemyTransform.position;
 
-        // ÈÃµĞÈËÃæÏòÍæ¼Ò
-        // ·½·¨1: Ê¹ÓÃ LookAt£¬Ê¹µĞÈËÖ±½Ó³¯ÏòÍæ¼Ò
-        // enemyTransform.LookAt(playerTransform.position);
+            // ç§»åŠ¨å’Œæ—‹è½¬
+            enemyTransform.Translate(directionToPlayer.normalized * runSpeed * Time.deltaTime, Space.World);
+            Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
+            enemyTransform.rotation = Quaternion.Slerp(enemyTransform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-        // ·½·¨2: Ê¹ÓÃÆ½»¬Ğı×ª£¨¸ü×ÔÈ»£©
-        Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
-        enemyTransform.rotation = Quaternion.Slerp(enemyTransform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-
-        // ´òÓ¡µ±Ç°µĞÈËºÍÍæ¼ÒµÄÎ»ÖÃ£¬ÓÃÓÚµ÷ÊÔ
-        //Debug.Log("Enemy Current Position: " + enemyTransform.position);
-        //Debug.Log("Player Position: " + playerTransform.position);
-
-        // ·µ»ØÈÎÎñÍê³É×´Ì¬£¬ÕâÀï¼ÙÉè×·ÖğĞĞÎª³ÖĞø½øĞĞ£¬·µ»Ø true
-        return true;
+            return true;
+        }
     }
 }
