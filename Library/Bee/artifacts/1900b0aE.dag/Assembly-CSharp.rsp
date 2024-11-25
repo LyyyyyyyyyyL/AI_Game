@@ -364,6 +364,7 @@
 "Assets/Gun/Gun.cs"
 "Assets/health/EnemyHealth.cs"
 "Assets/health/HPctroller.cs"
+"Assets/health/PlayerHealth.cs"
 "Assets/PlayerController.cs"
 -langversion:9.0
 /deterministic

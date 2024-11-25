@@ -61,8 +61,8 @@ public class RunBehavior : BehaviorNode
         enemyTransform.rotation = Quaternion.Slerp(enemyTransform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
         // 打印当前敌人和玩家的位置，用于调试
-        Debug.Log("Enemy Current Position: " + enemyTransform.position);
-        Debug.Log("Player Position: " + playerTransform.position);
+        //Debug.Log("Enemy Current Position: " + enemyTransform.position);
+        //Debug.Log("Player Position: " + playerTransform.position);
 
         // 返回任务完成状态，这里假设追逐行为持续进行，返回 true
         return true;

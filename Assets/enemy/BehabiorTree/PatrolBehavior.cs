@@ -48,7 +48,7 @@ public class PatrolBehavior : BehaviorNode
     public override bool Run()
     {
         // 打印敌人当前位置，用于调试
-        Debug.Log("Enemy Current Position: " + enemyTransform.position);
+        //Debug.Log("Enemy Current Position: " + enemyTransform.position);
 
         // 让敌人旋转
         RotateEnemy();
