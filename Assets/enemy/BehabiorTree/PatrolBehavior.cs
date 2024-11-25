@@ -6,10 +6,11 @@ public class PatrolBehavior : BehaviorNode
     public float rotateSpeed = 50f; // 旋转速度，单位为度/秒
     private Transform enemyTransform; // 用来存储敌人的 Transform
     public GameObject enemy; // 需要控制的敌人
+    public AudioClip zombieGrowl; // 存储僵尸的吼叫声
+    private AudioSource audioSource; // 用来播放声音的 AudioSource
 
     void Start()
     {
-        // 获取敌人的 Transform 组件
         if (enemy != null)
         {
             enemyTransform = enemy.transform;
@@ -17,6 +18,28 @@ public class PatrolBehavior : BehaviorNode
         else
         {
             Debug.LogError("Enemy GameObject not assigned!");
+        }
+
+        // 获取敌人对象的 AudioSource 组件
+        audioSource = enemy.GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            // 如果没有找到 AudioSource 组件，则动态添加一个
+            audioSource = enemy.AddComponent<AudioSource>();
+        }
+
+        // 设置音效文件
+        if (zombieGrowl != null)
+        {
+            audioSource.clip = zombieGrowl;
+            audioSource.loop = false; // 设置不循环播放
+            // 每隔 10 秒播放一次吼叫声
+            InvokeRepeating("PlayGrowl", 0f, 10f);
+            audioSource.Play(); // 播放声音
+        }
+        else
+        {
+            Debug.LogError("Zombie growl sound not assigned!");
         }
 
         Debug.Log("Patrol Behavior Started.");

@@ -391,7 +391,7 @@ Transform:
   m_GameObject: {fileID: 410027688}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3, y: 0.2524885, z: -0.3962989}
+  m_LocalPosition: {x: -0.3, y: 0, z: -0.3962989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1712,6 +1712,7 @@ MonoBehaviour:
   patrolSpeed: 1
   rotateSpeed: 10
   enemy: {fileID: 1631571655}
+  zombieGrowl: {fileID: 8300000, guid: ac7dd6f70c4c2a04baa1421a207ca118, type: 3}
 --- !u!4 &2109390147
 Transform:
   m_ObjectHideFlags: 0

@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\13079\\My project (2)\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\enemy\\behabiortree\\runbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\behabiortree\\runbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|c:\\users\\13079\\my project (2)\\assets\\enemy\\behabiortree\\patrolbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\behabiortree\\patrolbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\enemy\\behabiortree\\behaviormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\behabiortree\\behaviormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\enemy\\behabiortree\\runbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\behabiortree\\runbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\enemy\\behabiortree\\behaviornode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,36 +50,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "RunBehavior.cs",
               "DocumentMoniker": "C:\\Users\\13079\\My project (2)\\Assets\\enemy\\BehabiorTree\\RunBehavior.cs",
               "RelativeDocumentMoniker": "Assets\\enemy\\BehabiorTree\\RunBehavior.cs",
               "ToolTip": "C:\\Users\\13079\\My project (2)\\Assets\\enemy\\BehabiorTree\\RunBehavior.cs",
               "RelativeToolTip": "Assets\\enemy\\BehabiorTree\\RunBehavior.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAqwEYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T00:39:02.352Z"
+              "WhenOpened": "2024-11-24T00:39:02.352Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PatrolBehavior.cs",
               "DocumentMoniker": "C:\\Users\\13079\\My project (2)\\Assets\\enemy\\BehabiorTree\\PatrolBehavior.cs",
               "RelativeDocumentMoniker": "Assets\\enemy\\BehabiorTree\\PatrolBehavior.cs",
               "ToolTip": "C:\\Users\\13079\\My project (2)\\Assets\\enemy\\BehabiorTree\\PatrolBehavior.cs",
               "RelativeToolTip": "Assets\\enemy\\BehabiorTree\\PatrolBehavior.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAqwDUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAIwAwAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T00:23:20.972Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "BehaviorManager.cs",
               "DocumentMoniker": "C:\\Users\\13079\\My project (2)\\Assets\\enemy\\BehabiorTree\\BehaviorManager.cs",
               "RelativeDocumentMoniker": "Assets\\enemy\\BehabiorTree\\BehaviorManager.cs",
