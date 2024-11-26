@@ -9,17 +9,22 @@ public class RunBehavior : BehaviorNode
     private Transform enemyTransform; // 缓存敌人的 Transform
     private Transform playerTransform; // 缓存玩家的 Transform
     private NavMeshAgent navMeshAgent; // 自动寻路组件
-
+    
     void Start()
     {
-        // 获取敌人的 Transform 和 NavMeshAgent
+        // 确保敌人对象和NavMeshAgent都已正确初始化
         if (enemy != null)
         {
             enemyTransform = enemy.transform;
-            navMeshAgent = enemy.GetComponent<NavMeshAgent>();
+            navMeshAgent = enemy.GetComponent<NavMeshAgent>();  // 获取NavMeshAgent组件
+
             if (navMeshAgent == null)
             {
                 Debug.LogError("NavMeshAgent component is missing from the enemy GameObject!");
+            }
+            else
+            {
+                navMeshAgent.baseOffset = 1f; // 设置 NavMeshAgent 的基准高度
             }
         }
         else
@@ -35,8 +40,17 @@ public class RunBehavior : BehaviorNode
             Debug.LogError("Player not found! Make sure the player has the 'Player' tag.");
         }
 
-        Debug.Log("Run Behavior initialized.");
-    }
+        // 如果NavMeshAgent存在，调整速度和角速度
+        if (navMeshAgent != null)
+        {
+            navMeshAgent.speed = runSpeed; // 调整运行速度
+            navMeshAgent.angularSpeed = rotationSpeed * 100f; // 转向速度
+            navMeshAgent.angularSpeed = Mathf.Clamp(navMeshAgent.angularSpeed, 0f, 300f); // 确保角速度合理
+        }
+
+    Debug.Log("Run Behavior initialized.");
+}
+
 
     public override bool Run()
     {

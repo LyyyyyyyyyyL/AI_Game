@@ -127,7 +127,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4391718013820517804, guid: a14df274f46c936499869d28652bfd3a, type: 3}
   m_PrefabInstance: {fileID: 801455867445657601}
   m_PrefabAsset: {fileID: 0}
---- !u!195 &115389900
+--- !u!195 &115389907
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1841,7 +1841,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1943,15 +1943,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 776155141924343659, guid: a14df274f46c936499869d28652bfd3a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.529258
+      value: 11.25
       objectReference: {fileID: 0}
     - target: {fileID: 776155141924343659, guid: a14df274f46c936499869d28652bfd3a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5175115
+      value: 2.03
       objectReference: {fileID: 0}
     - target: {fileID: 776155141924343659, guid: a14df274f46c936499869d28652bfd3a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.169432
+      value: 10.11
       objectReference: {fileID: 0}
     - target: {fileID: 776155141924343659, guid: a14df274f46c936499869d28652bfd3a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2015,7 +2015,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4391718013820517804, guid: a14df274f46c936499869d28652bfd3a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 115389900}
+      addedObject: {fileID: 115389907}
   m_SourcePrefab: {fileID: 100100000, guid: a14df274f46c936499869d28652bfd3a, type: 3}
 --- !u!1001 &8233606903683703020
 PrefabInstance:
