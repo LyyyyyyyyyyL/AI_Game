@@ -26,7 +26,7 @@ public class Gun : MonoBehaviour
         }
     }
 
-    void FireBullet()
+    public void FireBullet()
     {
         // 创建子弹实例
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
