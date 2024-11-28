@@ -27,6 +27,7 @@ public class Bullet : MonoBehaviour
             Debug.Log("Enemy Collision working");
             // 获取敌人身上的 EnemyHealth 脚本
             EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
+   
 
             // 如果敌人有 EnemyHealth 脚本，调用 TakeDamage 函数
             if (enemyHealth != null)
@@ -37,6 +38,7 @@ public class Bullet : MonoBehaviour
             {
                 Debug.Log("null! no enemyHealth");
             }
+
 
         }
         Destroy(gameObject);

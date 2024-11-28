@@ -2,12 +2,15 @@ using UnityEngine;
 
 public class PatrolBehavior : BehaviorNode
 {
-    public float patrolSpeed = 5f; // 移动速度，单位为米/秒
-    public float rotateSpeed = 50f; // 旋转速度，单位为度/秒
-    private Transform enemyTransform; // 用来存储敌人的 Transform
-    public GameObject enemy; // 需要控制的敌人
-    public AudioClip zombieGrowl; // 存储僵尸的吼叫声
-    private AudioSource audioSource; // 用来播放声音的 AudioSource
+    public float wanderSpeed = 5f;  // 移动速度，单位为米/秒
+    public float wanderRadius = 5f;  // 徘徊半径
+    public float wanderJitter = 0.2f;  // 随机抖动幅度
+    private Transform enemyTransform;  // 用来存储敌人的 Transform
+    public GameObject enemy;  // 需要控制的敌人
+    public AudioClip zombieGrowl;  // 存储僵尸的吼叫声
+    private AudioSource audioSource;  // 用来播放声音的 AudioSource
+
+    private Vector3 wanderTarget;  // 当前徘徊目标
 
     void Start()
     {
@@ -32,17 +35,17 @@ public class PatrolBehavior : BehaviorNode
         if (zombieGrowl != null)
         {
             audioSource.clip = zombieGrowl;
-            audioSource.loop = false; // 设置不循环播放
+            audioSource.loop = false;  // 设置不循环播放
             // 每隔 10 秒播放一次吼叫声
             InvokeRepeating("PlayGrowl", 0f, 10f);
-            audioSource.Play(); // 播放声音
         }
         else
         {
             Debug.LogError("Zombie growl sound not assigned!");
         }
 
-        Debug.Log("Patrol Behavior Started.");
+        // 初始化徘徊目标
+        wanderTarget = enemyTransform.position;
     }
 
     public override bool Run()
@@ -50,27 +53,56 @@ public class PatrolBehavior : BehaviorNode
         // 打印敌人当前位置，用于调试
         //Debug.Log("Enemy Current Position: " + enemyTransform.position);
 
-        // 让敌人旋转
-        RotateEnemy();
+        // 生成新的徘徊目标
+        Wander();
 
-        // 让敌人向着自己当前面对的方向缓慢前进
+        // 让敌人沿着当前位置缓慢前进
         MoveEnemyForward();
 
-        // 返回 true，表示巡逻行为持续进行
+        // 返回 true，表示徘徊行为持续进行
         return true;
     }
 
-    // 让敌人围绕 Y 轴旋转
-    void RotateEnemy()
+    // 生成新的徘徊目标点
+    void Wander()
     {
-        // 旋转敌人，绕 Y 轴旋转 rotateSpeed 度/秒
-        enemyTransform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
+        // 生成一个随机的抖动向量
+        Vector3 randomDisplacement = new Vector3(
+            Random.Range(-1f, 1f),
+            0,  // 在2D平面或3D环境中，y轴不需要变化
+            Random.Range(-1f, 1f)
+        ) * wanderJitter;
+
+        // 添加随机抖动到徘徊目标
+        wanderTarget += randomDisplacement;
+
+        // 将徘徊目标限制到圆内
+        wanderTarget = (wanderTarget - enemyTransform.position).normalized * wanderRadius + enemyTransform.position;
     }
 
-    // 让敌人向着自己当前的朝向方向缓慢前进
+    // 让敌人沿着当前位置缓慢前进并面向目标
     void MoveEnemyForward()
     {
-        // 使敌人沿着它的前方方向移动，移动速度为 patrolSpeed
-        enemyTransform.Translate(enemyTransform.forward * patrolSpeed * Time.deltaTime);
+        // 使敌人沿着它的前方方向移动，移动速度为 wanderSpeed
+        enemyTransform.position = Vector3.MoveTowards(enemyTransform.position, wanderTarget, wanderSpeed * Time.deltaTime);
+
+        // 计算敌人当前方向
+        Vector3 directionToTarget = wanderTarget - enemyTransform.position;
+
+        // 如果目标位置不在当前面前，进行旋转
+        if (directionToTarget.sqrMagnitude > 0.1f)  // 防止除零错误
+        {
+            // 计算新的旋转角度
+            Quaternion targetRotation = Quaternion.LookRotation(directionToTarget);
+
+            // 让敌人平滑旋转到目标方向
+            enemyTransform.rotation = Quaternion.RotateTowards(enemyTransform.rotation, targetRotation, 360f * Time.deltaTime);
+        }
+    }
+
+    // 播放僵尸的吼叫声
+    void PlayGrowl()
+    {
+        audioSource.Play();
     }
 }

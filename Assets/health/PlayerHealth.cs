@@ -62,39 +62,4 @@ public class PlayerHealth : MonoBehaviour
 #endif
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy")) // 确保碰撞的物体是敌人
-        {
-            // 如果已经在扣血中，先停止现有的协程
-            if (damageCoroutine != null)
-            {
-                StopCoroutine(damageCoroutine);
-            }
-            // 启动协程每 0.5 秒扣一次血
-            damageCoroutine = StartCoroutine(DamageOverTime());
-        }
-    }
-
-    void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy")) // 当玩家离开敌人时停止扣血
-        {
-            if (damageCoroutine != null)
-            {
-                StopCoroutine(damageCoroutine);
-                damageCoroutine = null;
-            }
-        }
-    }
-
-    // 每 0.5 秒扣一次血
-    IEnumerator DamageOverTime()
-    {
-        while (true)  // 持续扣血，直到碰撞结束
-        {
-            TakeDamage(10f); // 每次扣 10 血
-            yield return new WaitForSeconds(0.5f);  // 等待 0.5 秒
-        }
-    }
 }

@@ -3,40 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\13079\\My project (2)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\enemy\\behabiortree\\behaviormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|c:\\users\\13079\\my project (2)\\assets\\enemy\\behabiortree\\behaviormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\behabiortree\\behaviormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\health\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\health\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\enemy\\behabiortree\\attackbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\behabiortree\\attackbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\enemy\\enemyistraggered.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\enemyistraggered.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\enemy\\behabiortree\\patrolbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\behabiortree\\patrolbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|c:\\users\\13079\\my project (2)\\assets\\gun\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\gun\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\enemy\\behabiortree\\behaviornode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\behabiortree\\behaviornode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\health\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\health\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\enemy\\behabiortree\\runbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\behabiortree\\runbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\allyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\allyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\enemy\\behabiortree\\behaviornode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\behabiortree\\behaviornode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\enemy\\behabiortree\\diebehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\behabiortree\\diebehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\health\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\health\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\health\\hpctroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\health\\hpctroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\gun\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\gun\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|solutionrelative:assets\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}|Assembly-CSharp.csproj|C:\\Users\\13079\\My project (2)\\assets\\gun\\gun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,44 +62,79 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "enemyIsTraggered.cs",
+              "DocumentMoniker": "C:\\Users\\13079\\My project (2)\\Assets\\enemy\\enemyIsTraggered.cs",
+              "RelativeDocumentMoniker": "Assets\\enemy\\enemyIsTraggered.cs",
+              "ToolTip": "C:\\Users\\13079\\My project (2)\\Assets\\enemy\\enemyIsTraggered.cs",
+              "RelativeToolTip": "Assets\\enemy\\enemyIsTraggered.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T00:55:24.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AllyHealth.cs",
+              "DocumentMoniker": "C:\\Users\\13079\\My project (2)\\Assets\\AllyHealth.cs",
+              "RelativeDocumentMoniker": "Assets\\AllyHealth.cs",
+              "ToolTip": "C:\\Users\\13079\\My project (2)\\Assets\\AllyHealth.cs",
+              "RelativeToolTip": "Assets\\AllyHealth.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAIwA8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T22:30:47.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AttackBehavior.cs",
+              "DocumentMoniker": "C:\\Users\\13079\\My project (2)\\Assets\\enemy\\BehabiorTree\\AttackBehavior.cs",
+              "RelativeDocumentMoniker": "Assets\\enemy\\BehabiorTree\\AttackBehavior.cs",
+              "ToolTip": "C:\\Users\\13079\\My project (2)\\Assets\\enemy\\BehabiorTree\\AttackBehavior.cs",
+              "RelativeToolTip": "Assets\\enemy\\BehabiorTree\\AttackBehavior.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAIwEIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T19:45:46.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DieBehavior.cs",
+              "DocumentMoniker": "C:\\Users\\13079\\My project (2)\\Assets\\enemy\\BehabiorTree\\DieBehavior.cs",
+              "RelativeDocumentMoniker": "Assets\\enemy\\BehabiorTree\\DieBehavior.cs",
+              "ToolTip": "C:\\Users\\13079\\My project (2)\\Assets\\enemy\\BehabiorTree\\DieBehavior.cs",
+              "RelativeToolTip": "Assets\\enemy\\BehabiorTree\\DieBehavior.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAADwvwkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T15:16:12.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "PlayerHealth.cs",
               "DocumentMoniker": "C:\\Users\\13079\\My project (2)\\Assets\\health\\PlayerHealth.cs",
               "RelativeDocumentMoniker": "Assets\\health\\PlayerHealth.cs",
               "ToolTip": "C:\\Users\\13079\\My project (2)\\Assets\\health\\PlayerHealth.cs",
               "RelativeToolTip": "Assets\\health\\PlayerHealth.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAF8AAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T13:10:40.48Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RunBehavior.cs",
-              "DocumentMoniker": "C:\\Users\\13079\\My project (2)\\Assets\\enemy\\BehabiorTree\\RunBehavior.cs",
-              "RelativeDocumentMoniker": "Assets\\enemy\\BehabiorTree\\RunBehavior.cs",
-              "ToolTip": "C:\\Users\\13079\\My project (2)\\Assets\\enemy\\BehabiorTree\\RunBehavior.cs",
-              "RelativeToolTip": "Assets\\enemy\\BehabiorTree\\RunBehavior.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAxwDYAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T00:39:02.352Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PatrolBehavior.cs",
               "DocumentMoniker": "C:\\Users\\13079\\My project (2)\\Assets\\enemy\\BehabiorTree\\PatrolBehavior.cs",
               "RelativeDocumentMoniker": "Assets\\enemy\\BehabiorTree\\PatrolBehavior.cs",
               "ToolTip": "C:\\Users\\13079\\My project (2)\\Assets\\enemy\\BehabiorTree\\PatrolBehavior.cs",
               "RelativeToolTip": "Assets\\enemy\\BehabiorTree\\PatrolBehavior.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAwCQAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAwGwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T00:23:20.972Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T00:23:20.972Z"
             },
             {
               "$type": "Document",
@@ -97,14 +144,14 @@
               "RelativeDocumentMoniker": "Assets\\enemy\\BehabiorTree\\BehaviorManager.cs",
               "ToolTip": "C:\\Users\\13079\\My project (2)\\Assets\\enemy\\BehabiorTree\\BehaviorManager.cs",
               "RelativeToolTip": "Assets\\enemy\\BehabiorTree\\BehaviorManager.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAIwC4AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAuwFMAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T00:13:28.88Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "BehaviorNode.cs",
               "DocumentMoniker": "C:\\Users\\13079\\My project (2)\\Assets\\enemy\\BehabiorTree\\BehaviorNode.cs",
               "RelativeDocumentMoniker": "Assets\\enemy\\BehabiorTree\\BehaviorNode.cs",
@@ -116,20 +163,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "EnemyHealth.cs",
               "DocumentMoniker": "C:\\Users\\13079\\My project (2)\\Assets\\health\\EnemyHealth.cs",
               "RelativeDocumentMoniker": "Assets\\health\\EnemyHealth.cs",
               "ToolTip": "C:\\Users\\13079\\My project (2)\\Assets\\health\\EnemyHealth.cs",
               "RelativeToolTip": "Assets\\health\\EnemyHealth.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAowB4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T14:35:21.27Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T14:35:21.27Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "HPctroller.cs",
               "DocumentMoniker": "C:\\Users\\13079\\My project (2)\\Assets\\health\\HPctroller.cs",
               "RelativeDocumentMoniker": "Assets\\health\\HPctroller.cs",
@@ -141,20 +187,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "Bullet.cs",
               "DocumentMoniker": "C:\\Users\\13079\\My project (2)\\Assets\\Gun\\Bullet.cs",
               "RelativeDocumentMoniker": "Assets\\Gun\\Bullet.cs",
               "ToolTip": "C:\\Users\\13079\\My project (2)\\Assets\\Gun\\Bullet.cs",
               "RelativeToolTip": "Assets\\Gun\\Bullet.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAABIwBUAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwBUAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T13:44:59.005Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T13:44:59.005Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Gun.cs",
               "DocumentMoniker": "C:\\Users\\13079\\My project (2)\\Assets\\Gun\\Gun.cs",
               "RelativeDocumentMoniker": "Assets\\Gun\\Gun.cs",
@@ -166,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\13079\\My project (2)\\Assets\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerController.cs",

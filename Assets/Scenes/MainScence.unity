@@ -122,33 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &115389899 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4391718013820517804, guid: a14df274f46c936499869d28652bfd3a, type: 3}
-  m_PrefabInstance: {fileID: 801455867445657601}
-  m_PrefabAsset: {fileID: 0}
---- !u!195 &115389907
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 115389899}
-  m_Enabled: 1
-  m_AgentTypeID: -1372625422
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &154724224
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,6 +342,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6567002315818515323, guid: 54a50711f2276104892ae90c61b8fc5f, type: 3}
   m_PrefabInstance: {fileID: 342653985}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &403461839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 403461840}
+  - component: {fileID: 403461841}
+  m_Layer: 0
+  m_Name: AttackTrigger
+  m_TagString: Attack
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &403461840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403461839}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 559904182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &403461841
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403461839}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.9
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &559904177
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,6 +534,7 @@ Transform:
   - {fileID: 1193912875}
   - {fileID: 1819271744}
   - {fileID: 1020268234}
+  - {fileID: 403461840}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &559904183
@@ -583,7 +610,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &587310878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -674,6 +701,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4053110707865833309, guid: 504a972d68525124e8e3dcedad79dbc4, type: 3}
   m_PrefabInstance: {fileID: 8233606903683703020}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &921010951 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3127567768211299308, guid: a14df274f46c936499869d28652bfd3a, type: 3}
+  m_PrefabInstance: {fileID: 801455867445657601}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1020268233
 GameObject:
@@ -1419,7 +1451,7 @@ GameObject:
   - component: {fileID: 1581835400}
   - component: {fileID: 1581835399}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: PlayerHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2478,10 +2510,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1225708246557604393, guid: a14df274f46c936499869d28652bfd3a, type: 3}
-      propertyPath: destroyDelay
-      value: 2
-      objectReference: {fileID: 0}
+    - target: {fileID: 1564049014880186159, guid: a14df274f46c936499869d28652bfd3a, type: 3}
+      propertyPath: enemyBody
+      value: 
+      objectReference: {fileID: 921010951}
+    - target: {fileID: 1564049014880186159, guid: a14df274f46c936499869d28652bfd3a, type: 3}
+      propertyPath: hurtMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f42457c915f0724987e400aa82a7595, type: 2}
+    - target: {fileID: 1564049014880186159, guid: a14df274f46c936499869d28652bfd3a, type: 3}
+      propertyPath: originalMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 586859422c355b64782186d9d38a516b, type: 2}
     - target: {fileID: 1566304980321581890, guid: a14df274f46c936499869d28652bfd3a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2506,13 +2546,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6683689477698280023, guid: a14df274f46c936499869d28652bfd3a, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683689477698280023, guid: a14df274f46c936499869d28652bfd3a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 586859422c355b64782186d9d38a516b, type: 2}
+    - target: {fileID: 6683689477698280023, guid: a14df274f46c936499869d28652bfd3a, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f42457c915f0724987e400aa82a7595, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4391718013820517804, guid: a14df274f46c936499869d28652bfd3a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 115389907}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a14df274f46c936499869d28652bfd3a, type: 3}
 --- !u!1001 &8233606903683703020
 PrefabInstance:
