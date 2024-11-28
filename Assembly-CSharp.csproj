@@ -67,6 +67,7 @@
     <Compile Include="Assets\gun2.cs" />
     <Compile Include="Assets\Gun\Bullet.cs" />
     <Compile Include="Assets\enemy\BehabiorTree\BehaviorNode.cs" />
+    <Compile Include="Assets\enemy\BehabiorTree\AttackBehaviorSpitter.cs" />
     <Compile Include="Assets\enemy\BehabiorTree\PatrolBehavior.cs" />
     <Compile Include="Assets\AIAlly.cs" />
     <Compile Include="Assets\enemy\BehabiorTree\AttackBehavior.cs" />

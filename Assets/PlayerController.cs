@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -12,12 +11,22 @@ public class PlayerController : MonoBehaviour
     private float xRotation = 0f;
     private bool isGrounded = true; // 是否在地面上
     private Rigidbody rb;
+    private bool isTakingDamage = false; // 标记是否正在扣血
+
+    private PlayerHealth playerHealth; // 引用 PlayerHealth 脚本
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         rb = GetComponent<Rigidbody>();
         Physics.gravity = new Vector3(0, gravty, 0);
+
+        // 获取 PlayerHealth 组件
+        playerHealth = GetComponent<PlayerHealth>();
+        if (playerHealth == null)
+        {
+            Debug.LogError("PlayerHealth script not found on the player object!");
+        }
     }
 
     void Update()
@@ -43,39 +52,46 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isGrounded= false;
-            //OnTriggerStay(other);
+            isGrounded = false;
         }
-
-
     }
 
     void OnTriggerStay(Collider other)
     {
-        //Debug.Log("hello!");
-
         if (other.transform.tag == "Ground")
         {
             isGrounded = true;
-            //Debug.Log("Grounded");
+        }
+        else if (other.transform.tag == "Venom")
+        {
+            isGrounded = true;
+            if (!isTakingDamage && playerHealth != null) // 确保协程不会重复运行
+            {
+                StartCoroutine(TakeDamageOverTime());
+            }
         }
         else
         {
             isGrounded = false;
-            //Debug.Log("Not Grounded!");
         }
     }
 
-
-    void OnCollisionEnter(Collision other)
+    IEnumerator TakeDamageOverTime()
     {
-     //   if (other.gameObject.CompareTag("Player"))
+        isTakingDamage = true; // 标记正在扣血
+        while (isTakingDamage) // 持续扣血，直到玩家离开毒液区域
         {
-            Rigidbody rbdy = other.gameObject.GetComponent<Rigidbody>();
-            //Debug.Log("running");
+            playerHealth.TakeDamage(5f); // 每次扣5点血
+            yield return new WaitForSeconds(1f); // 等待1秒
         }
     }
 
-
-
+    void OnTriggerExit(Collider other)
+    {
+        if (other.transform.tag == "Venom")
+        {
+            isTakingDamage = false; // 标记停止扣血
+            Debug.Log("Player left venom zone.");
+        }
+    }
 }

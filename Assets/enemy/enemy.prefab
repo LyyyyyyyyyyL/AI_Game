@@ -263,7 +263,7 @@ MonoBehaviour:
   enemy: {fileID: 4391718013820517804}
   enemyArm: {fileID: 1617158611585281402}
   rotationSpeed: 300
-  damage: 10
+  damage: 30
   checkInterval: 1
 --- !u!1 &3121288415315098429
 GameObject:
@@ -800,7 +800,7 @@ MonoBehaviour:
   hurtBehavior: {fileID: 1564049014880186159}
   attackBehavior: {fileID: 6518967779797558349}
   dieBehavior: {fileID: 1225708246557604393}
-  enemyIsTraggered: {fileID: 0}
+  enemyIsTraggered: {fileID: 4685656026390460835}
   EnemyHealth: {fileID: 2400777146217609983}
 --- !u!54 &6328015030538139204
 Rigidbody:
@@ -1194,6 +1194,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13fa38d94ed791a4180edc215c72d9f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalMaterial: {fileID: 0}
+  hurtMaterial: {fileID: 0}
+  enemyBody: {fileID: 0}
   enemy: {fileID: 4391718013820517804}
 --- !u!1 &8454445250579710082
 GameObject:
