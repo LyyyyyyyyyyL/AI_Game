@@ -93,6 +93,7 @@ public class TeammateAI : MonoBehaviour
         else
         {
             Debug.LogWarning("NavMeshAgent or Player is not assigned, or NavMesh is invalid.");
+            Debug.LogWarning(player);
         }
     }
 
