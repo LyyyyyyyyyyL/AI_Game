@@ -4,55 +4,59 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float maxHealth = 100f;  // ×î´óÑªÁ¿
-    public float currentHealth;     // µ±Ç°ÑªÁ¿
-    public Slider playerHealthSlider; // Íæ¼ÒÑªÌõSlider
-    public Image fillImage; // ÓÃÓÚÐÞ¸ÄÑªÌõÑÕÉ«µÄImage
+    public float maxHealth = 100f;  // ï¿½ï¿½ï¿½Ñªï¿½ï¿½
+    public float currentHealth;     // ï¿½ï¿½Ç°Ñªï¿½ï¿½
+    public Slider playerHealthSlider; // ï¿½ï¿½ï¿½Ñªï¿½ï¿½Slider
+    public Image fillImage; // ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½Ñªï¿½ï¿½ï¿½ï¿½É«ï¿½ï¿½Image
 
-    private Coroutine damageCoroutine; // ÓÃÀ´´æ´¢Ð­³ÌÒýÓÃ£¬·½±ãÍ£Ö¹Ð­³Ì
+    private Coroutine damageCoroutine; // ï¿½ï¿½ï¿½ï¿½ï¿½æ´¢Ð­ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½Í£Ö¹Ð­ï¿½ï¿½
 
     void Start()
     {
-        // ³õÊ¼»¯ÑªÁ¿
+        // ï¿½ï¿½Ê¼ï¿½ï¿½Ñªï¿½ï¿½
         currentHealth = maxHealth;
-        // ÉèÖÃÑªÌõµÄ×î´óÖµºÍ³õÊ¼Öµ
+        // ï¿½ï¿½ï¿½ï¿½Ñªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½Í³ï¿½Ê¼Öµ
         playerHealthSlider.maxValue = maxHealth;
         playerHealthSlider.value = currentHealth;
 
-        // »ñÈ¡ÑªÌõµÄÌî³ä²¿·ÖImage
+        // ï¿½ï¿½È¡Ñªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä²¿ï¿½ï¿½Image
         fillImage = playerHealthSlider.fillRect.GetComponent<Image>();
     }
 
     void Update()
     {
-        // ¸ù¾Ýµ±Ç°ÑªÁ¿¸üÐÂÑªÌõ
+        // ï¿½ï¿½ï¿½Ýµï¿½Ç°Ñªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñªï¿½ï¿½
         playerHealthSlider.value = currentHealth;
 
-        // ¼ì²éÑªÁ¿²¢¸ù¾ÝÑªÁ¿ÉèÖÃÑÕÉ«
+        // ï¿½ï¿½ï¿½Ñªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«
         if (currentHealth <= maxHealth / 2f)
         {
             fillImage.color = Color.red;
         }
         else
         {
-            fillImage.color = Color.white;  // Ä¬ÈÏÑÕÉ«
+            fillImage.color = Color.white;  // Ä¬ï¿½ï¿½ï¿½ï¿½É«
         }
 
-        // ¼ì²éÑªÁ¿ÊÇ·ñÎª 0£¬½áÊøÓÎÏ·
+        // ï¿½ï¿½ï¿½Ñªï¿½ï¿½ï¿½Ç·ï¿½Îª 0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·
         if (currentHealth <= 0f)
         {
             EndGame();
         }
     }
 
-    // ¿ÛÑªµÄ·½·¨
+    // ï¿½ï¿½Ñªï¿½Ä·ï¿½ï¿½ï¿½
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);  // ±£Ö¤ÑªÁ¿²»µÍÓÚ0
+        currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);  // ï¿½ï¿½Ö¤Ñªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0
     }
-
-    // ½áÊøÓÎÏ·µÄ·½·¨
+    public void AddHealth(int amount)
+    {
+        currentHealth += amount;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth); // ç¡®ä¿è¡€é‡ä¸è¶…è¿‡æœ€å¤§å€¼
+    }
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½Ä·ï¿½ï¿½ï¿½
     void EndGame()
     {
         Debug.Log("Game Over");

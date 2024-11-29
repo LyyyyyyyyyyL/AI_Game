@@ -379,6 +379,7 @@
 "Assets/health/EnemyHealth.cs"
 "Assets/health/HPctroller.cs"
 "Assets/health/PlayerHealth.cs"
+"Assets/HealthPack.cs"
 "Assets/open.cs"
 "Assets/PlayerController.cs"
 "Assets/TeammateHealth.cs"
