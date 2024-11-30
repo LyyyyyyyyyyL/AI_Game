@@ -71,7 +71,7 @@ public class BehaviorManager : MonoBehaviour
                 Debug.Log("Enemy hit by bullet! Switching to HurtBehavior.");
             }
         }
-        Debug.Log("enemyIsTraggered = " + (enemyIsTraggered != null && enemyIsTraggered.isInBulletTrigger));
+//        Debug.Log("enemyIsTraggered = " + (enemyIsTraggered != null && enemyIsTraggered.isInBulletTrigger));
 
     }
 

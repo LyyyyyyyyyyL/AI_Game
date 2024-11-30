@@ -1,24 +1,24 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class TeammateAI2 : MonoBehaviour
+public class HealingTeammate : MonoBehaviour
 {
-    public Transform player;  // 玩家位置
-    public Transform enemy;   // 敌人位置
+    public Transform player; // 玩家位置
+    public float healingAmount = 10f; // 每次回血的量
+    public float healInterval = 1f; // 回复间隔时间
+    public float healingRange = 5f; // 回复的最大距离
+
     private NavMeshAgent agent;
-
-    public float detectionRange = 10f;  // 距离玩家的检测范围
-    public float shootingRange = 5f;   // 开枪的最大距离
-    public float shootInterval = 1f;   // 开枪间隔时间
-
-    private float timeSinceLastShot = 0f; // 上次开枪时间
+    private float timeSinceLastHeal = 0f; // 上次回复的时间
+    private float remainingLife = 100f; // 机器人生命值
+    private bool isHealingCompleted = false; // 判断是否完成了回血任务
 
     // 定义状态枚举
     private enum State
     {
-        Idle,      // 闲置状态
         Follow,    // 跟随玩家
-        Attack     // 攻击敌人
+        Heal,      // 给玩家回血
+        Dying      // 自我销毁
     }
 
     private State currentState; // 当前状态
@@ -27,21 +27,14 @@ public class TeammateAI2 : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
 
-        // 动态查找敌人（假设敌人有 "Enemy" 标签）
-        if (enemy == null)
-        {
-            GameObject enemyObject = GameObject.FindWithTag("Enemy");
-            if (enemyObject != null)
-            {
-                enemy = enemyObject.transform;
-            }
-            else
-            {
-                Debug.LogError("Enemy not found in the scene! Ensure there is a GameObject with the tag 'Enemy'.");
-            }
-        }
+        // 初始状态为跟随
+        currentState = State.Follow;
 
-        currentState = State.Idle; // 初始化为闲置状态
+        // 检查玩家是否分配
+        if (player == null)
+        {
+            Debug.LogError("Player not assigned! Ensure there is a player object in the scene.");
+        }
     }
 
     void Update()
@@ -49,32 +42,21 @@ public class TeammateAI2 : MonoBehaviour
         // 检测当前状态并执行对应逻辑
         switch (currentState)
         {
-            case State.Idle:
-                HandleIdleState();
-                break;
-
             case State.Follow:
                 HandleFollowState();
                 break;
 
-            case State.Attack:
-                HandleAttackState();
+            case State.Heal:
+                HandleHealState();
+                break;
+
+            case State.Dying:
+                HandleDyingState();
                 break;
         }
 
         // 更新时间
-        timeSinceLastShot += Time.deltaTime;
-    }
-
-    // 闲置状态处理
-    void HandleIdleState()
-    {
-        Debug.Log("Teammate is idle.");
-        if (player != null)
-        {
-            // 如果玩家存在，切换到跟随状态
-            currentState = State.Follow;
-        }
+        timeSinceLastHeal += Time.deltaTime;
     }
 
     // 跟随状态处理
@@ -84,86 +66,107 @@ public class TeammateAI2 : MonoBehaviour
         {
             agent.SetDestination(player.position); // 跟随玩家
 
-            // 检查是否需要切换到攻击状态
-            if (enemy != null && Vector3.Distance(transform.position, enemy.position) <= detectionRange)
+            PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
             {
-                currentState = State.Attack; // 敌人进入检测范围，切换到攻击状态
+                // 如果玩家血量不足且在回血范围内，切换到回血状态
+                if (playerHealth.currentHealth < playerHealth.maxHealth &&
+                    Vector3.Distance(transform.position, player.position) <= healingRange)
+                {
+                    currentState = State.Heal;
+                }
+            }
+            else
+            {
+                Debug.LogWarning("PlayerHealth component not found!");
             }
         }
         else
         {
             Debug.LogWarning("NavMeshAgent or Player is not assigned, or NavMesh is invalid.");
-            Debug.LogWarning(player);
         }
     }
 
-    // 攻击状态处理
-    void HandleAttackState()
+    // 回血状态处理
+    void HandleHealState()
     {
-        if (enemy != null)
+        if (player != null)
         {
-            float distanceToEnemy = Vector3.Distance(transform.position, enemy.position);
+            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-            // 如果敌人离开检测范围，切换回跟随状态
-            if (distanceToEnemy > detectionRange)
+            // 如果玩家离开回血范围，切换回跟随状态
+            if (distanceToPlayer > healingRange)
             {
                 currentState = State.Follow;
                 return;
             }
 
-            // 如果敌人在射程范围内，尝试射击
-            if (distanceToEnemy <= shootingRange && CanSeeEnemy())
+            PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
             {
-                if (timeSinceLastShot >= shootInterval)
+                // 如果玩家满血，切换回跟随状态
+                if (playerHealth.currentHealth >= playerHealth.maxHealth)
                 {
-                    ShootAtEnemy();
-                    timeSinceLastShot = 0f; // 重置开枪间隔
+                    currentState = State.Follow;
+                    return;
+                }
+
+                // 如果可以回血，执行回血逻辑
+                if (timeSinceLastHeal >= healInterval)
+                {
+                    HealPlayer(playerHealth);
+                    timeSinceLastHeal = 0f; // 重置回血间隔
+                }
+
+                // 如果机器人生命值耗尽，进入死亡状态
+                if (isHealingCompleted)
+                {
+                    currentState = State.Dying;
                 }
             }
             else
             {
-                // 如果敌人不在射程内，靠近敌人
-                agent.SetDestination(enemy.position);
+                Debug.LogWarning("PlayerHealth component not found!");
+                currentState = State.Follow;
             }
         }
         else
         {
-            // 如果敌人丢失，切换回跟随状态
+            Debug.LogWarning("Player is not assigned.");
             currentState = State.Follow;
         }
     }
 
-    // 检测是否能看到敌人
-    bool CanSeeEnemy()
+    // 机器人死亡逻辑
+    void HandleDyingState()
     {
-        RaycastHit hit;
-        Vector3 directionToEnemy = enemy.position - transform.position;
-
-        // 射线检测
-        if (Physics.Raycast(transform.position, directionToEnemy, out hit, detectionRange))
-        {
-            if (hit.collider != null && hit.collider.transform == enemy)
-            {
-                return true; // 射线命中敌人
-            }
-        }
-        return false;
+        Debug.Log("Healing robot has completed its task and is self-destructing.");
+        Destroy(gameObject); // 销毁机器人
     }
 
-    // 执行开枪逻辑
-    void ShootAtEnemy()
+    // 执行回血逻辑
+    void HealPlayer(PlayerHealth playerHealth)
     {
-        Debug.Log("Shooting at enemy!");
-
-        // 获取枪械脚本（确保枪械是作为子物体挂在队友上）
-        Gun gun = GetComponentInChildren<Gun>();
-        if (gun != null)
+        float missingHealth = playerHealth.maxHealth - playerHealth.currentHealth;
+        if (missingHealth > 0)
         {
-            gun.FireBullet(); // 调用实际的开枪方法
+            // 计算本次实际回复的血量
+            float healAmount = Mathf.Min(healingAmount, missingHealth);
+            playerHealth.AddHealth((int)healAmount); // 调用 PlayerHealth 的回血方法
+
+            remainingLife -= healAmount; // 消耗机器人的生命值
+            Debug.Log($"Player healed for {healAmount}. Robot remaining life: {remainingLife}");
+
+            // 如果机器人生命值用完，标记回血完成
+            if (remainingLife <= 0)
+            {
+                isHealingCompleted = true;
+            }
         }
         else
         {
-            Debug.LogWarning("Gun component not found!");
+            Debug.Log("Player is already at full health. Healing task complete.");
+            isHealingCompleted = true; // 玩家满血则标记完成任务
         }
     }
 }

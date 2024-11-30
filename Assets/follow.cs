@@ -1,17 +1,21 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class TeammateAI : MonoBehaviour
+public class Follow : MonoBehaviour
 {
-    public Transform player;  // 玩家位置
-    public Transform enemy;   // 敌人位置
-    private NavMeshAgent agent;
-
-    public float detectionRange = 10f;  // 距离玩家的检测范围
-    public float shootingRange = 5f;   // 开枪的最大距离
-    public float shootInterval = 1f;   // 开枪间隔时间
+    public Transform player;       // 玩家位置
+    public float detectionRange = 15f; // 队友与敌人间的检测距离
+    public float shootingRange = 10f;  // 队友的射击范围
+    public float shootInterval = 1f;   // 射击的间隔时间
+    public float maxDistanceFromPlayer = 20f;  // 队友与玩家之间的最大允许距离
+    public float normalSpeed = 3.5f;  // 正常的移动速度
+    public float increasedSpeed = 10.5f; // 离玩家过远时的三倍速度
 
     private float timeSinceLastShot = 0f; // 上次开枪时间
+    private TeammateGun gun;              // 队友的枪
+
+    private Transform nearestEnemy; // 最近的敌人
+    private NavMeshAgent agent;
 
     // 定义状态枚举
     private enum State
@@ -27,20 +31,14 @@ public class TeammateAI : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
 
-        // 动态查找敌人（假设敌人有 "Enemy" 标签）
-        if (enemy == null)
+        // 获取TeammateGun脚本
+        gun = GetComponentInChildren<TeammateGun>();
+        if (gun == null)
         {
-            GameObject enemyObject = GameObject.FindWithTag("Enemy");
-            if (enemyObject != null)
-            {
-                enemy = enemyObject.transform;
-            }
-            else
-            {
-                Debug.LogError("Enemy not found in the scene! Ensure there is a GameObject with the tag 'Enemy'.");
-            }
+            Debug.LogWarning("No TeammateGun component found.");
         }
 
+        agent.speed = normalSpeed;  // 初始化时设定正常速度
         currentState = State.Idle; // 初始化为闲置状态
     }
 
@@ -69,7 +67,6 @@ public class TeammateAI : MonoBehaviour
     // 闲置状态处理
     void HandleIdleState()
     {
-        Debug.Log("Teammate is idle.");
         if (player != null)
         {
             // 如果玩家存在，切换到跟随状态
@@ -82,27 +79,65 @@ public class TeammateAI : MonoBehaviour
     {
         if (agent != null && agent.isOnNavMesh && player != null)
         {
+            agent.baseOffset = 1f; // 设置 NavMeshAgent 的基准高度
             agent.SetDestination(player.position); // 跟随玩家
 
+            // 查找最近的敌人
+            FindNearestEnemy();
+
             // 检查是否需要切换到攻击状态
-            if (enemy != null && Vector3.Distance(transform.position, enemy.position) <= detectionRange)
+            if (nearestEnemy != null && Vector3.Distance(transform.position, nearestEnemy.position) <= detectionRange)
             {
-                currentState = State.Attack; // 敌人进入检测范围，切换到攻击状态
+                currentState = State.Attack; // 最近的敌人进入检测范围，切换到攻击状态
+            }
+
+            // 检查与玩家的距离，如果太远，增加移动速度
+            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+            if (distanceToPlayer > maxDistanceFromPlayer)
+            {
+                // 如果距离过远，三倍速度寻找玩家
+                agent.speed = increasedSpeed;
+            }
+            else
+            {
+                // 恢复正常速度
+                agent.speed = normalSpeed;
             }
         }
         else
         {
             Debug.LogWarning("NavMeshAgent or Player is not assigned, or NavMesh is invalid.");
-            Debug.LogWarning(player);
         }
+    }
+
+    // 查找最近的敌人
+    void FindNearestEnemy()
+    {
+        // 查找所有敌人（假设敌人有 "Enemy" 标签）
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        Transform closestEnemy = null;
+        float minDistance = float.MaxValue;
+
+        foreach (GameObject enemy in enemies)
+        {
+            float distance = Vector3.Distance(transform.position, enemy.transform.position);
+            if (distance < minDistance && distance <= detectionRange)
+            {
+                minDistance = distance;
+                closestEnemy = enemy.transform;
+            }
+        }
+
+        nearestEnemy = closestEnemy;
     }
 
     // 攻击状态处理
     void HandleAttackState()
     {
-        if (enemy != null)
+        if (nearestEnemy != null)
         {
-            float distanceToEnemy = Vector3.Distance(transform.position, enemy.position);
+            float distanceToEnemy = Vector3.Distance(transform.position, nearestEnemy.position);
+            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
             // 如果敌人离开检测范围，切换回跟随状态
             if (distanceToEnemy > detectionRange)
@@ -111,59 +146,44 @@ public class TeammateAI : MonoBehaviour
                 return;
             }
 
-            // 如果敌人在射程范围内，尝试射击
-            if (distanceToEnemy <= shootingRange && CanSeeEnemy())
+            // 如果与玩家的距离太远，停止攻击并寻找玩家
+            if (distanceToPlayer > maxDistanceFromPlayer)
             {
-                if (timeSinceLastShot >= shootInterval)
+                currentState = State.Follow;
+                return;
+            }
+
+            // 让队友面向敌人
+            FaceEnemy();
+
+            // 如果敌人在射程范围内，尝试射击
+            if (distanceToEnemy <= shootingRange)
+            {
+                if (timeSinceLastShot >= shootInterval && gun != null)
                 {
-                    ShootAtEnemy();
-                    timeSinceLastShot = 0f; // 重置开枪间隔
+                    gun.FireBullet();  // 自动开枪
+                    timeSinceLastShot = 0f;  // 重置射击间隔
                 }
             }
             else
             {
                 // 如果敌人不在射程内，靠近敌人
-                agent.SetDestination(enemy.position);
+                agent.SetDestination(nearestEnemy.position);
             }
         }
         else
         {
-            // 如果敌人丢失，切换回跟随状态
+            // 如果没有找到敌人，切换回跟随状态
             currentState = State.Follow;
         }
     }
 
-    // 检测是否能看到敌人
-    bool CanSeeEnemy()
+    // 使队友面向敌人
+    void FaceEnemy()
     {
-        RaycastHit hit;
-        Vector3 directionToEnemy = enemy.position - transform.position;
-
-        // 射线检测
-        if (Physics.Raycast(transform.position, directionToEnemy, out hit, detectionRange))
-        {
-            if (hit.collider != null && hit.collider.transform == enemy)
-            {
-                return true; // 射线命中敌人
-            }
-        }
-        return false;
-    }
-
-    // 执行开枪逻辑
-    void ShootAtEnemy()
-    {
-        Debug.Log("Shooting at enemy!");
-
-        // 获取枪械脚本（确保枪械是作为子物体挂在队友上）
-        Gun gun = GetComponentInChildren<Gun>();
-        if (gun != null)
-        {
-            gun.FireBullet(); // 调用实际的开枪方法
-        }
-        else
-        {
-            Debug.LogWarning("Gun component not found!");
-        }
+        Vector3 directionToEnemy = nearestEnemy.position - transform.position;
+        directionToEnemy.y = 0f; // 忽略y轴的偏差，确保只在水平面上旋转
+        Quaternion targetRotation = Quaternion.LookRotation(directionToEnemy);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f); // 平滑旋转
     }
 }

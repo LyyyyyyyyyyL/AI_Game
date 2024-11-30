@@ -14,7 +14,7 @@ public class AttackBehaviorSpitterObject : BehaviorNode
     private Transform targetTransform;  // 存储目标 Transform
     private NavMeshAgent navMeshAgent;  // 敌人的 NavMeshAgent 组件
     private PlayerHealth playerHealth; // 存储玩家的血量脚本
-    private bool isPlayerInTrigger = true; // 标记玩家是否在触发范围内
+    //private bool isPlayerInTrigger = true; // 标记玩家是否在触发范围内
     private float lastCheckTime = 0f; // 上次检测的时间
     public float checkInterval = 1f; // 每秒检测一次
 

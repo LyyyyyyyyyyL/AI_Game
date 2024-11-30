@@ -3,36 +3,40 @@
   "WorkspaceRootPath": "E:\\Unity\\AI_Game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|e:\\unity\\ai_game\\assets\\follow2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\follow2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|e:\\unity\\ai_game\\assets\\to_end.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\to_end.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|e:\\unity\\ai_game\\assets\\follow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|e:\\unity\\ai_game\\assets\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|E:\\Unity\\AI_Game\\assets\\gun\\gun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\gun\\gun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|E:\\Unity\\AI_Game\\assets\\end-sp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\end-sp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Unity\\AI_Game\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\Text.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\Text.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|E:\\Unity\\AI_Game\\assets\\follow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\follow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|e:\\unity\\ai_game\\assets\\enemy\\behabiortree\\attackbehaviorspitter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\behabiortree\\attackbehaviorspitter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|E:\\Unity\\AI_Game\\assets\\gun2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\gun2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|E:\\Unity\\AI_Game\\assets\\allyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\allyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|E:\\Unity\\AI_Game\\assets\\health\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\health\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|E:\\Unity\\AI_Game\\assets\\health\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\health\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|E:\\Unity\\AI_Game\\assets\\enemy\\behabiortree\\behaviormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\behabiortree\\behaviormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|E:\\Unity\\AI_Game\\assets\\gun\\gun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\gun\\gun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|E:\\Unity\\AI_Game\\assets\\follow2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\follow2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|E:\\Unity\\AI_Game\\assets\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,8 +47,36 @@
       "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\behabiortree\\runbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|E:\\Unity\\AI_Game\\assets\\health\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\health\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|E:\\Unity\\AI_Game\\assets\\enemy\\enemyistraggered.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\enemyistraggered.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|E:\\Unity\\AI_Game\\assets\\enemy\\behabiortree\\behaviormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\behabiortree\\behaviormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|E:\\Unity\\AI_Game\\assets\\health\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\health\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|E:\\Unity\\AI_Game\\assets\\enemy\\behabiortree\\attackbehaviorspitter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\behabiortree\\attackbehaviorspitter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|E:\\Unity\\AI_Game\\assets\\aially.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF6FC237-2ED9-AA67-275C-20DE8E85A6D9}|Assembly-CSharp.csproj|solutionrelative:assets\\aially.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Unity\\AI_Game\\Assets\\end_game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\end_game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Unity\\AI_Game\\Assets\\ends.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\ends.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,134 +86,230 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AttackBehaviorSpitter.cs",
-              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\enemy\\BehabiorTree\\AttackBehaviorSpitter.cs",
-              "RelativeDocumentMoniker": "Assets\\enemy\\BehabiorTree\\AttackBehaviorSpitter.cs",
-              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\enemy\\BehabiorTree\\AttackBehaviorSpitter.cs",
-              "RelativeToolTip": "Assets\\enemy\\BehabiorTree\\AttackBehaviorSpitter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T14:09:08.449Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "follow2.cs",
-              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\follow2.cs",
-              "RelativeDocumentMoniker": "Assets\\follow2.cs",
-              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\follow2.cs",
-              "RelativeToolTip": "Assets\\follow2.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAAAswBIAAAAKAAAAAAAAAA==",
+              "Title": "to_end.cs",
+              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\to_end.cs",
+              "RelativeDocumentMoniker": "Assets\\to_end.cs",
+              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\to_end.cs",
+              "RelativeToolTip": "Assets\\to_end.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAADwvz0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T14:08:07.388Z",
+              "WhenOpened": "2024-11-30T04:25:18.068Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BehaviorManager.cs",
-              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\enemy\\BehabiorTree\\BehaviorManager.cs",
-              "RelativeDocumentMoniker": "Assets\\enemy\\BehabiorTree\\BehaviorManager.cs",
-              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\enemy\\BehabiorTree\\BehaviorManager.cs",
-              "RelativeToolTip": "Assets\\enemy\\BehabiorTree\\BehaviorManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T20:01:25.612Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AllyHealth.cs",
-              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\AllyHealth.cs",
-              "RelativeDocumentMoniker": "Assets\\AllyHealth.cs",
-              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\AllyHealth.cs",
-              "RelativeToolTip": "Assets\\AllyHealth.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T19:11:03.888Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PlayerHealth.cs",
-              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\health\\PlayerHealth.cs",
-              "RelativeDocumentMoniker": "Assets\\health\\PlayerHealth.cs",
-              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\health\\PlayerHealth.cs",
-              "RelativeToolTip": "Assets\\health\\PlayerHealth.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAQwGQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T18:33:18.172Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EnemyHealth.cs",
-              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\health\\EnemyHealth.cs",
-              "RelativeDocumentMoniker": "Assets\\health\\EnemyHealth.cs",
-              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\health\\EnemyHealth.cs",
-              "RelativeToolTip": "Assets\\health\\EnemyHealth.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T19:10:37.899Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "test.cs",
+              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\test.cs",
+              "RelativeDocumentMoniker": "Assets\\test.cs",
+              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\test.cs",
+              "RelativeToolTip": "Assets\\test.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAmwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T04:16:54.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "end_game.cs",
+              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\end_game.cs",
+              "RelativeDocumentMoniker": "Assets\\end_game.cs",
+              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\end_game.cs",
+              "RelativeToolTip": "Assets\\end_game.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAuwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T03:21:27.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Text.cs",
+              "DocumentMoniker": "E:\\Unity\\AI_Game\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\Text.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\Text.cs",
+              "ToolTip": "E:\\Unity\\AI_Game\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\Text.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\Text.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T03:18:23.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ends.cs",
+              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\ends.cs",
+              "RelativeDocumentMoniker": "Assets\\ends.cs",
+              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\ends.cs",
+              "RelativeToolTip": "Assets\\ends.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T03:01:21.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "gun2.cs",
+              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\gun2.cs",
+              "RelativeDocumentMoniker": "Assets\\gun2.cs",
+              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\gun2.cs",
+              "RelativeToolTip": "Assets\\gun2.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAywBkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T01:17:55.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "follow.cs",
               "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\follow.cs",
               "RelativeDocumentMoniker": "Assets\\follow.cs",
               "ToolTip": "E:\\Unity\\AI_Game\\Assets\\follow.cs",
               "RelativeToolTip": "Assets\\follow.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAAYwIsAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAtwHQAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T18:30:03.488Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T18:30:03.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "follow2.cs",
+              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\follow2.cs",
+              "RelativeDocumentMoniker": "Assets\\follow2.cs",
+              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\follow2.cs",
+              "RelativeToolTip": "Assets\\follow2.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAADwv6wAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T14:08:07.388Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "AllyHealth.cs",
+              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\AllyHealth.cs",
+              "RelativeDocumentMoniker": "Assets\\AllyHealth.cs",
+              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\AllyHealth.cs",
+              "RelativeToolTip": "Assets\\AllyHealth.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T19:11:03.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EnemyHealth.cs",
+              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\health\\EnemyHealth.cs",
+              "RelativeDocumentMoniker": "Assets\\health\\EnemyHealth.cs",
+              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\health\\EnemyHealth.cs",
+              "RelativeToolTip": "Assets\\health\\EnemyHealth.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T19:10:37.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Gun.cs",
               "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\Gun\\Gun.cs",
               "RelativeDocumentMoniker": "Assets\\Gun\\Gun.cs",
               "ToolTip": "E:\\Unity\\AI_Game\\Assets\\Gun\\Gun.cs",
               "RelativeToolTip": "Assets\\Gun\\Gun.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBgAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T18:17:27.05Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\PlayerController.cs",
-              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\PlayerController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCYAAAA3AAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "end-sp.cs",
+              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\end-sp.cs",
+              "RelativeDocumentMoniker": "Assets\\end-sp.cs",
+              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\end-sp.cs",
+              "RelativeToolTip": "Assets\\end-sp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T16:57:02.217Z"
+              "WhenOpened": "2024-11-30T03:52:09.737Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "RunBehavior.cs",
               "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\enemy\\BehabiorTree\\RunBehavior.cs",
               "RelativeDocumentMoniker": "Assets\\enemy\\BehabiorTree\\RunBehavior.cs",
               "ToolTip": "E:\\Unity\\AI_Game\\Assets\\enemy\\BehabiorTree\\RunBehavior.cs",
               "RelativeToolTip": "Assets\\enemy\\BehabiorTree\\RunBehavior.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAqwEoAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAiwAoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T16:50:05.52Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerController.cs",
+              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\PlayerController.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAqwGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T16:57:02.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PlayerHealth.cs",
+              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\health\\PlayerHealth.cs",
+              "RelativeDocumentMoniker": "Assets\\health\\PlayerHealth.cs",
+              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\health\\PlayerHealth.cs",
+              "RelativeToolTip": "Assets\\health\\PlayerHealth.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAIwEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T18:33:18.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BehaviorManager.cs",
+              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\enemy\\BehabiorTree\\BehaviorManager.cs",
+              "RelativeDocumentMoniker": "Assets\\enemy\\BehabiorTree\\BehaviorManager.cs",
+              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\enemy\\BehabiorTree\\BehaviorManager.cs",
+              "RelativeToolTip": "Assets\\enemy\\BehabiorTree\\BehaviorManager.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAADgv0kAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T20:01:25.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "enemyIsTraggered.cs",
+              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\enemy\\enemyIsTraggered.cs",
+              "RelativeDocumentMoniker": "Assets\\enemy\\enemyIsTraggered.cs",
+              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\enemy\\enemyIsTraggered.cs",
+              "RelativeToolTip": "Assets\\enemy\\enemyIsTraggered.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBcAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T15:28:05.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AttackBehaviorSpitter.cs",
+              "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\enemy\\BehabiorTree\\AttackBehaviorSpitter.cs",
+              "RelativeDocumentMoniker": "Assets\\enemy\\BehabiorTree\\AttackBehaviorSpitter.cs",
+              "ToolTip": "E:\\Unity\\AI_Game\\Assets\\enemy\\BehabiorTree\\AttackBehaviorSpitter.cs",
+              "RelativeToolTip": "Assets\\enemy\\BehabiorTree\\AttackBehaviorSpitter.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAYwFMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T14:09:08.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "AIAlly.cs",
               "DocumentMoniker": "E:\\Unity\\AI_Game\\Assets\\AIAlly.cs",
               "RelativeDocumentMoniker": "Assets\\AIAlly.cs",

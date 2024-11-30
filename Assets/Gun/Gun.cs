@@ -22,7 +22,7 @@ public class Gun : MonoBehaviour
         {
             FireBullet();
             PlayShootSound();
-            print("fire billet");
+            //print("fire billet");
         }
     }
 
