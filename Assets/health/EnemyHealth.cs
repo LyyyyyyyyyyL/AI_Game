@@ -3,11 +3,11 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public Slider healthSlider;  // °ó¶¨ÑªÌõ Slider
-    public float maxHealth = 100f;  // ×î´óÑªÁ¿
-    public float currentHealth;  // µ±Ç°ÑªÁ¿
+    public Slider healthSlider;  // ï¿½ï¿½Ñªï¿½ï¿½ Slider
+    public float maxHealth = 10f;  // ï¿½ï¿½ï¿½Ñªï¿½ï¿½
+    public float currentHealth;  // ï¿½ï¿½Ç°Ñªï¿½ï¿½
 
-    // ÒýÓÃ enemyIsTraggered ½Å±¾
+    // ï¿½ï¿½ï¿½ï¿½ enemyIsTraggered ï¿½Å±ï¿½
     public enemyIsTraggered enemyTriggerScript;
 
     void Start()
@@ -16,7 +16,7 @@ public class EnemyHealth : MonoBehaviour
         healthSlider.maxValue = maxHealth;
         healthSlider.value = currentHealth;
 
-        // »ñÈ¡ enemyIsTraggered ½Å±¾
+        // ï¿½ï¿½È¡ enemyIsTraggered ï¿½Å±ï¿½
         if (enemyTriggerScript == null)
         {
             enemyTriggerScript = GetComponent<enemyIsTraggered>();
@@ -35,14 +35,14 @@ public class EnemyHealth : MonoBehaviour
             currentHealth = 0;
         }
 
-        // ¸üÐÂÑªÌõ
+        // ï¿½ï¿½ï¿½ï¿½Ñªï¿½ï¿½
         healthSlider.value = currentHealth;
         //Debug.Log("Hitted. Reducing HP. TakeDamage working.");
 
-        // ½« isInBulletTrigger ÉèÖÃÎª true
+        // ï¿½ï¿½ isInBulletTrigger ï¿½ï¿½ï¿½ï¿½Îª true
         if (enemyTriggerScript != null)
         {
-            enemyTriggerScript.isInBulletTrigger = true; // ÉèÖÃÎª true ±íÊ¾µÐÈË±»×Óµ¯»÷ÖÐ
+            enemyTriggerScript.isInBulletTrigger = true; // ï¿½ï¿½ï¿½ï¿½Îª true ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ë±ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½
             Debug.Log("enemyIsTraggered.isInBulletTrigger set to true.");
         }
     }
