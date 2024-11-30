@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -41,7 +42,7 @@ public class PlayerHealth : MonoBehaviour
         // ���Ѫ���Ƿ�Ϊ 0��������Ϸ
         if (currentHealth <= 0f)
         {
-            EndGame();
+            PlayerDie();
         }
     }
 
@@ -57,13 +58,15 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth); // 确保血量不超过最大值
     }
     // ������Ϸ�ķ���
-    void EndGame()
+       void PlayerDie()
     {
         Debug.Log("Game Over");
-        Application.Quit();
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#endif
+
+        // 确保时间流动（防止暂停状态影响场景切换）
+        Time.timeScale = 1;
+
+        // 切换到 GameOverScene
+        SceneManager.LoadScene("GameOverScene");
     }
 
 }
