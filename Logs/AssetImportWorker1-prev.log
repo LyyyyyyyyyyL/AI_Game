@@ -22,7 +22,7 @@ AssetImportWorker1
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-57164
+60377
 Successfully changed project path to: /Users/yuanyuanchen/AI_Game
 /Users/yuanyuanchen/AI_Game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -56,14 +56,14 @@ Successfully changed project path to: /Users/yuanyuanchen/AI_Game
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [8716985024]  Target information:
+Player connection [8718824128]  Target information:
 
-Player connection [8716985024]  * "[IP] 192.168.178.81 [Port] 0 [Flags] 2 [Guid] 1366233850 [EditorId] 1366233850 [Version] 1048832 [Id] OSXEditor(0,yuanyuans-MBP.fritz.box) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+Player connection [8718824128]  * "[IP] 10.66.64.63 [Port] 0 [Flags] 2 [Guid] 2285138590 [EditorId] 2285138590 [Version] 1048832 [Id] OSXEditor(0,yuanyuans-MacBook-Pro.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
 
-Player connection [8716985024] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [8716985024] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [8718824128] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8718824128] Host joined alternative multi-casting on [225.0.0.222:34997]...
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-Refreshing native plugins compatible for Editor in 10.17 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 11.39 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.45f1 (a13dfa44d684)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2022.3.45f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -78,17 +78,17 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2022.3.45f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2022.3.45f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/2022.3.45f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56899
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56363
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2022.3.45f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.002779 seconds.
-- Loaded All Assemblies, in  0.526 seconds
+Registered in 0.002721 seconds.
+- Loaded All Assemblies, in  0.507 seconds
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.941 seconds
-Domain Reload Profiling: 1467ms
-	BeginReloadAssembly (211ms)
+- Finished resetting the current domain, in  0.905 seconds
+Domain Reload Profiling: 1413ms
+	BeginReloadAssembly (198ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
@@ -97,25 +97,25 @@ Domain Reload Profiling: 1467ms
 	RebuildCommonClasses (33ms)
 	RebuildNativeTypeToScriptingClass (9ms)
 	initialDomainReloadingComplete (138ms)
-	LoadAllAssembliesAndSetupDomain (135ms)
-		LoadAssemblies (208ms)
+	LoadAllAssembliesAndSetupDomain (130ms)
+		LoadAssemblies (195ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (131ms)
-			TypeCache.Refresh (127ms)
-				TypeCache.ScanAssembly (114ms)
+		AnalyzeDomain (126ms)
+			TypeCache.Refresh (123ms)
+				TypeCache.ScanAssembly (110ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (2ms)
-	FinalizeReload (942ms)
+	FinalizeReload (906ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (852ms)
+		SetupLoadedEditorAssemblies (820ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (28ms)
-			SetLoadedEditorAssemblies (18ms)
+			InitializePlatformSupportModulesInManaged (29ms)
+			SetLoadedEditorAssemblies (19ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (7ms)
-			ProcessInitializeOnLoadAttributes (604ms)
-			ProcessInitializeOnLoadMethodAttributes (195ms)
+			BeforeProcessingInitializeOnLoad (6ms)
+			ProcessInitializeOnLoadAttributes (574ms)
+			ProcessInitializeOnLoadMethodAttributes (191ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -124,55 +124,55 @@ Domain Reload Profiling: 1467ms
 Worker process is ready to serve import requests
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.993 seconds
+- Loaded All Assemblies, in  0.897 seconds
 Native extension for OSXStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.884 seconds
-Domain Reload Profiling: 2880ms
-	BeginReloadAssembly (301ms)
+- Finished resetting the current domain, in  1.748 seconds
+Domain Reload Profiling: 2647ms
+	BeginReloadAssembly (275ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (37ms)
+		DisableScriptedObjects (35ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (28ms)
-	RebuildCommonClasses (32ms)
+		CreateAndSetChildDomain (27ms)
+	RebuildCommonClasses (31ms)
 	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (101ms)
-	LoadAllAssembliesAndSetupDomain (552ms)
-		LoadAssemblies (478ms)
+	initialDomainReloadingComplete (97ms)
+	LoadAllAssembliesAndSetupDomain (485ms)
+		LoadAssemblies (434ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (215ms)
-			TypeCache.Refresh (165ms)
-				TypeCache.ScanAssembly (134ms)
-			ScanForSourceGeneratedMonoScriptInfo (38ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (1886ms)
+		AnalyzeDomain (181ms)
+			TypeCache.Refresh (140ms)
+				TypeCache.ScanAssembly (123ms)
+			ScanForSourceGeneratedMonoScriptInfo (31ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (1749ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1563ms)
+		SetupLoadedEditorAssemblies (1458ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (19ms)
-			SetLoadedEditorAssemblies (8ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (111ms)
-			ProcessInitializeOnLoadAttributes (1329ms)
-			ProcessInitializeOnLoadMethodAttributes (94ms)
+			BeforeProcessingInitializeOnLoad (109ms)
+			ProcessInitializeOnLoadAttributes (1232ms)
+			ProcessInitializeOnLoadMethodAttributes (90ms)
 			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (11ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
 Launching external process: /Applications/Unity/Hub/Editor/2022.3.45f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.76 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler after 0.10 seconds
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3586 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 22 unused Assets / (125.2 KB). Loaded Objects now: 4053.
-Memory consumption went from 146.0 MB to 145.9 MB.
-Total: 3.319791 ms (FindLiveObjects: 0.209917 ms CreateObjectMapping: 0.087500 ms MarkObjects: 2.853458 ms  DeleteObjects: 0.168084 ms)
+Unloading 3594 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 22 unused Assets / (125.5 KB). Loaded Objects now: 4061.
+Memory consumption went from 145.9 MB to 145.7 MB.
+Total: 3.230625 ms (FindLiveObjects: 0.179959 ms CreateObjectMapping: 0.081750 ms MarkObjects: 2.795792 ms  DeleteObjects: 0.172416 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -188,137 +188,897 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+Received Import Request.
+  Time since last request: 506335.309188 seconds.
+  path: Assets/Material Palette.asset
+  artifactKey: Guid(f7e474254403c4fd69cdf3b691e9aa80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Material Palette.asset using Guid(f7e474254403c4fd69cdf3b691e9aa80) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '8f74d591ceec8957018a92e81b872cc9') in 0.021025 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/factory.prefab
+  artifactKey: Guid(914653a0eef9c4fed95fc6166fe2e8d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/factory.prefab using Guid(914653a0eef9c4fed95fc6166fe2e8d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '1cda62e8290d7d66955d141c8145bc3a') in 0.309363 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 852
+========================================================================
 Received Prepare
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.660 seconds
+- Loaded All Assemblies, in  0.834 seconds
 Native extension for OSXStandalone target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.987 seconds
-Domain Reload Profiling: 2647ms
-	BeginReloadAssembly (268ms)
+- Finished resetting the current domain, in  2.282 seconds
+Domain Reload Profiling: 3118ms
+	BeginReloadAssembly (373ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (33ms)
+		DisableScriptedObjects (32ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (50ms)
-	RebuildCommonClasses (32ms)
+		CreateAndSetChildDomain (92ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (62ms)
+	LoadAllAssembliesAndSetupDomain (357ms)
+		LoadAssemblies (469ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (44ms)
+			TypeCache.Refresh (20ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (10ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (2284ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1615ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (21ms)
+			SetLoadedEditorAssemblies (9ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (117ms)
+			ProcessInitializeOnLoadAttributes (1379ms)
+			ProcessInitializeOnLoadMethodAttributes (88ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 0.87 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3554 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 17 unused Assets / (95.1 KB). Loaded Objects now: 4073.
+Memory consumption went from 144.4 MB to 144.3 MB.
+Total: 2.849333 ms (FindLiveObjects: 0.207292 ms CreateObjectMapping: 0.076000 ms MarkObjects: 2.447667 ms  DeleteObjects: 0.117916 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/debug.cs: e2517872633b57a755ac2fe56c8b791f -> 
+  custom:scripting/monoscript/fileName/SkewTextExample.cs: c142d02d70a129e0533975f7c2f96956 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/HunterHurt.cs: 3c9ee58aeb68753e8642aab13eb03485 -> 
+  custom:scripting/monoscript/fileName/AIAlly.cs: f6afb23c3f923e134722d6737b2347fc -> 
+  custom:scripting/monoscript/fileName/TMP_TextEventHandler.cs: f5cd9d5a43bfefc8f4fec80e6de896a4 -> 
+  custom:scripting/monoscript/fileName/HurtHunter.cs: 497699802a3c92196250428bcc0729d7 -> 
+  custom:scripting/monoscript/fileName/TextMeshProFloatingText.cs: 92608fa4a6315cd0786d82205e77b697 -> 
+  custom:scripting/monoscript/fileName/spiderbullet.cs: 14a9c89f4f8d94245c4c1c2bb6c816fe -> 
+  custom:scripting/monoscript/fileName/VertexZoom.cs: 650ab1e81d40126e3edcf737cce646e4 -> 
+  custom:scripting/monoscript/fileName/follow.cs: 04d7b2a4d28d75b3f1c1084a58bf5a59 -> 
+  custom:scripting/monoscript/fileName/VertexShakeA.cs: 63ec564c588058369499638dd899e05b -> 
+  custom:scripting/monoscript/fileName/TMP_ExampleScript_01.cs: a9d4be556104ff54e7d240529b3e01dc -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/TMP_TextEventCheck.cs: 13505d917eab5868c435e0c2986dadfa -> 
+  custom:scripting/monoscript/fileName/TMP_TextSelector_B.cs: ba2be21a7486d37b1011342977a2e49d -> 
+  custom:scripting/monoscript/fileName/Benchmark01.cs: 2d3e2cd961730ab95f139a49a673bace -> 
+  custom:scripting/monoscript/fileName/TeammateHealth.cs: d766b36d28699f9402cf10f92342f4c9 -> 
+  custom:scripting/monoscript/fileName/HealthPack.cs: 8e973d3886b3e90911f4ec3c267b8bd0 -> 
+  custom:scripting/monoscript/fileName/Gun.cs: 7d05faef1ad0b187da47b70860e6ba9a -> 
+  custom:scripting/monoscript/fileName/EnemyHealth.cs: a4d027726692f4f1a1dc379aafbb87e2 -> 
+  custom:scripting/monoscript/fileName/Benchmark02.cs: 5640963252ce70910e726415f869ced6 -> 
+  custom:scripting/monoscript/fileName/PlayerController.cs: d93a52a180fbbe603a59e9aa6da73c83 -> 
+  custom:scripting/monoscript/fileName/DropdownSample.cs: 0a92251794e5f10400149f96c3c59e5d -> 
+  custom:scripting/monoscript/fileName/chagerBehave.cs: 9772a7da78e9a6b8c2c785182150dd54 -> 
+  custom:scripting/monoscript/fileName/WarpTextExample.cs: 2663459c266363641981c7d17b698d7f -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/gamecontroller.cs: 98325445a751e7b172e393a70fb0c490 -> 
+  custom:scripting/monoscript/fileName/RunBehavior.cs: 7250af83c279eaeb3ec78fd36714ea11 -> 
+  custom:scripting/monoscript/fileName/follow2.cs: 2d4fd536faa07a1a4f49376d0a036b46 -> 
+  custom:scripting/monoscript/fileName/ChatController.cs: 876d5ccae6e345dd5d9450eb0a748f16 -> 
+  custom:scripting/monoscript/fileName/DieBehavior.cs: c2d92effbe3bb7ddb1d8592dc77f33a4 -> 
+  custom:scripting/monoscript/fileName/TextMeshSpawner.cs: 76f28e2ddb031571e6ec62b018f65fa8 -> 
+  custom:scripting/monoscript/fileName/TeleType.cs: 31fa97821c4c70f157ec81d507aa6b62 -> 
+  custom:scripting/monoscript/fileName/Benchmark04.cs: 32220b148620e52aa81c13a114862bf4 -> 
+  custom:scripting/monoscript/fileName/gun2.cs: dcaa0b364a75c4693071d907fa24a61a -> 
+  custom:scripting/monoscript/fileName/open.cs: 3f5a50cb221c02d81e281d8bd5f61854 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/TMP_PhoneNumberValidator.cs: 7c3049f481e464c6a9a15dee56c3126f -> 
+  custom:scripting/monoscript/fileName/AttackBehaviorSpitter.cs: 5b7042fd047968627ba28b2c7bcb7550 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:scripting/monoscript/fileName/PatrolBehavior.cs: dcf73cf8fa64b452380a92985f83ba4b -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:scripting/monoscript/fileName/EnvMapAnimator.cs: 1b4f61c17e4b7283c3ac351aacff9d26 -> 
+  custom:scripting/monoscript/fileName/ShaderPropAnimator.cs: 55ce425812446482e623ff2695c94cb2 -> 
+  custom:scripting/monoscript/fileName/PlayerHealth.cs: 49f415306e52895faa0b0a35d62e54a1 -> 
+  custom:scripting/monoscript/fileName/SimpleScript.cs: 454caab0c6c050f29b39d82e1d66d0fa -> 
+  custom:scripting/monoscript/fileName/ObjectSpin.cs: 2b96bb2079dd7fa5108d981627a28e1e -> 
+  custom:scripting/monoscript/fileName/CameraController.cs: 34b6be4e23ce86dc89786916c5983296 -> 
+  custom:scripting/monoscript/fileName/TMP_TextInfoDebugTool.cs: 3f1709cfb2cc628169113a35b5e9be3f -> 
+  custom:scripting/monoscript/fileName/BehaviorNode.cs: 45ab94e1905b0881aaadb7101cedafd7 -> 
+  custom:scripting/monoscript/fileName/PlayerWin.cs: 26bd90ab5eede9abcfff9eb3f85eb2a5 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:scripting/monoscript/fileName/to_end.cs: 914809bebb9cebbb22c6b7428d299319 -> 
+  custom:scripting/monoscript/fileName/ZombieSpawner.cs: d75371d327ed155022385343c4d65f0c -> 
+  custom:scripting/monoscript/fileName/BehaviorManager.cs: 06545da0d7f6a19c1aa8e3b068454e22 -> 
+  custom:scripting/monoscript/fileName/HPctroller.cs: 2b57f61fb9a11a42f59b0c7935d5b38f -> 
+  custom:scripting/monoscript/fileName/AttackBehavior.cs: dad1d2beb3d4478f4b7b1503ee555519 -> 
+  custom:scripting/monoscript/fileName/Chager.cs: 44a3fc1b9cde053fdc48fe9f6d5db2e7 -> 
+  custom:scripting/monoscript/fileName/TMP_TextSelector_A.cs: 347309a09d56e367b188a6978f75b424 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/gunn.cs: aab30c74a7667fdef217ffb7e1872f35 -> 
+  custom:scripting/monoscript/fileName/Spiderbehavior.cs: b23c04a72171da1bfba3c740e359e309 -> 
+  custom:scripting/monoscript/fileName/VertexJitter.cs: d27eb5498e48714a66aece98da065133 -> 
+  custom:scripting/monoscript/fileName/Bullet.cs: 21b72f633b0ae24658c2b58406350175 -> 
+  custom:scripting/monoscript/fileName/adjustpivot.cs: 20efc8e4a113e664b25c006bb635eedb -> 
+  custom:scripting/monoscript/fileName/TextConsoleSimulator.cs: 33fc311abb20b5b0ed8f00e4d86b574e -> 
+  custom:scripting/monoscript/fileName/VertexColorCycler.cs: 5f984ca91cf3609293aecc6bc5641572 -> 
+  custom:scripting/monoscript/fileName/TMP_FrameRateCounter.cs: 46f655df8cb483ac5958307137b1585a -> 
+  custom:scripting/monoscript/fileName/VertexShakeB.cs: a6f78c4fcda1a29a1a1c1baefedba9e7 -> 
+  custom:scripting/monoscript/fileName/TMP_UiFrameRateCounter.cs: b01021aea19247f14a98ab338907956a -> 
+  custom:scripting/monoscript/fileName/end-sp.cs: 9933fbcc6190e2a9171c2ec8808a053e -> 
+  custom:scripting/monoscript/fileName/enemyIsTraggered.cs: edf43e5c33fad5cf7be86604e7f96c62 -> 
+  custom:scripting/monoscript/fileName/TMPro_InstructionOverlay.cs: b626d2270e6ebd5c4311585c18b58d8d -> 
+  custom:scripting/monoscript/fileName/TMP_DigitValidator.cs: ac02af96215ae3951a3cce9e1a8c6085 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/Benchmark01_UGUI.cs: 6148cfe2627b7708298f301788144139 -> 
+  custom:scripting/monoscript/fileName/HurtBehavior.cs: d8d14f9524e3ec31db0c9d9a7c7f6efd -> 
+  custom:scripting/monoscript/fileName/AllyHealth.cs: 0ddabf7f22a5092033f70d462b51f7eb -> 
+  custom:scripting/monoscript/fileName/MouseManager.cs: 6ac4e4e03984271fd1f80dcdcecc1ff0 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: cd2942a0e6e5f293cd88536662112394 -> 
+  custom:scripting/monoscript/fileName/Benchmark03.cs: 17cc87e0529ac71d909a946afb47a274 -> 
+  custom:scripting/monoscript/fileName/end.cs: b39d91587c2553fd886ac9cec92f1e80 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 80.170438 seconds.
+  path: Assets/Gun/bullet.prefab
+  artifactKey: Guid(74073d10db6223642a964f946eb457e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gun/bullet.prefab using Guid(74073d10db6223642a964f946eb457e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: 'ed9cfe205abdb5b6c0b78bbdb9dcd985') in 0.189947 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.755 seconds
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.297 seconds
+Domain Reload Profiling: 3053ms
+	BeginReloadAssembly (321ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (36ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (68ms)
+	RebuildCommonClasses (33ms)
 	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (59ms)
-	LoadAllAssembliesAndSetupDomain (291ms)
-		LoadAssemblies (400ms)
+	initialDomainReloadingComplete (65ms)
+	LoadAllAssembliesAndSetupDomain (326ms)
+		LoadAssemblies (449ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (33ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (10ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (2298ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1623ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (12ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (113ms)
+			ProcessInitializeOnLoadAttributes (1385ms)
+			ProcessInitializeOnLoadMethodAttributes (94ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3555 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 16 unused Assets / (94.6 KB). Loaded Objects now: 4078.
+Memory consumption went from 148.5 MB to 148.4 MB.
+Total: 2.736292 ms (FindLiveObjects: 0.177334 ms CreateObjectMapping: 0.072584 ms MarkObjects: 2.372959 ms  DeleteObjects: 0.112959 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/debug.cs: e2517872633b57a755ac2fe56c8b791f -> 
+  custom:scripting/monoscript/fileName/SkewTextExample.cs: c142d02d70a129e0533975f7c2f96956 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/HunterHurt.cs: 3c9ee58aeb68753e8642aab13eb03485 -> 
+  custom:scripting/monoscript/fileName/AIAlly.cs: f6afb23c3f923e134722d6737b2347fc -> 
+  custom:scripting/monoscript/fileName/TMP_TextEventHandler.cs: f5cd9d5a43bfefc8f4fec80e6de896a4 -> 
+  custom:scripting/monoscript/fileName/HurtHunter.cs: 497699802a3c92196250428bcc0729d7 -> 
+  custom:scripting/monoscript/fileName/TextMeshProFloatingText.cs: 92608fa4a6315cd0786d82205e77b697 -> 
+  custom:scripting/monoscript/fileName/spiderbullet.cs: 14a9c89f4f8d94245c4c1c2bb6c816fe -> 
+  custom:scripting/monoscript/fileName/VertexZoom.cs: 650ab1e81d40126e3edcf737cce646e4 -> 
+  custom:scripting/monoscript/fileName/follow.cs: 04d7b2a4d28d75b3f1c1084a58bf5a59 -> 
+  custom:scripting/monoscript/fileName/VertexShakeA.cs: 63ec564c588058369499638dd899e05b -> 
+  custom:scripting/monoscript/fileName/TMP_ExampleScript_01.cs: a9d4be556104ff54e7d240529b3e01dc -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/TMP_TextEventCheck.cs: 13505d917eab5868c435e0c2986dadfa -> 
+  custom:scripting/monoscript/fileName/TMP_TextSelector_B.cs: ba2be21a7486d37b1011342977a2e49d -> 
+  custom:scripting/monoscript/fileName/Benchmark01.cs: 2d3e2cd961730ab95f139a49a673bace -> 
+  custom:scripting/monoscript/fileName/TeammateHealth.cs: d766b36d28699f9402cf10f92342f4c9 -> 
+  custom:scripting/monoscript/fileName/HealthPack.cs: 8e973d3886b3e90911f4ec3c267b8bd0 -> 
+  custom:scripting/monoscript/fileName/Gun.cs: 7d05faef1ad0b187da47b70860e6ba9a -> 
+  custom:scripting/monoscript/fileName/EnemyHealth.cs: a4d027726692f4f1a1dc379aafbb87e2 -> 
+  custom:scripting/monoscript/fileName/Benchmark02.cs: 5640963252ce70910e726415f869ced6 -> 
+  custom:scripting/monoscript/fileName/PlayerController.cs: d93a52a180fbbe603a59e9aa6da73c83 -> 
+  custom:scripting/monoscript/fileName/DropdownSample.cs: 0a92251794e5f10400149f96c3c59e5d -> 
+  custom:scripting/monoscript/fileName/chagerBehave.cs: 9772a7da78e9a6b8c2c785182150dd54 -> 
+  custom:scripting/monoscript/fileName/WarpTextExample.cs: 2663459c266363641981c7d17b698d7f -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/gamecontroller.cs: 98325445a751e7b172e393a70fb0c490 -> 
+  custom:scripting/monoscript/fileName/RunBehavior.cs: 7250af83c279eaeb3ec78fd36714ea11 -> 
+  custom:scripting/monoscript/fileName/follow2.cs: 2d4fd536faa07a1a4f49376d0a036b46 -> 
+  custom:scripting/monoscript/fileName/ChatController.cs: 876d5ccae6e345dd5d9450eb0a748f16 -> 
+  custom:scripting/monoscript/fileName/DieBehavior.cs: c2d92effbe3bb7ddb1d8592dc77f33a4 -> 
+  custom:scripting/monoscript/fileName/TextMeshSpawner.cs: 76f28e2ddb031571e6ec62b018f65fa8 -> 
+  custom:scripting/monoscript/fileName/TeleType.cs: 31fa97821c4c70f157ec81d507aa6b62 -> 
+  custom:scripting/monoscript/fileName/Benchmark04.cs: 32220b148620e52aa81c13a114862bf4 -> 
+  custom:scripting/monoscript/fileName/AStarPathfinding.cs: f6cd5308ea26addd7c2d61946aeaccc3 -> 
+  custom:scripting/monoscript/fileName/gun2.cs: dcaa0b364a75c4693071d907fa24a61a -> 
+  custom:scripting/monoscript/fileName/open.cs: 3f5a50cb221c02d81e281d8bd5f61854 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/TMP_PhoneNumberValidator.cs: 7c3049f481e464c6a9a15dee56c3126f -> 
+  custom:scripting/monoscript/fileName/AttackBehaviorSpitter.cs: 5b7042fd047968627ba28b2c7bcb7550 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:scripting/monoscript/fileName/PatrolBehavior.cs: dcf73cf8fa64b452380a92985f83ba4b -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:scripting/monoscript/fileName/EnvMapAnimator.cs: 1b4f61c17e4b7283c3ac351aacff9d26 -> 
+  custom:scripting/monoscript/fileName/ShaderPropAnimator.cs: 55ce425812446482e623ff2695c94cb2 -> 
+  custom:scripting/monoscript/fileName/PlayerHealth.cs: 49f415306e52895faa0b0a35d62e54a1 -> 
+  custom:scripting/monoscript/fileName/SimpleScript.cs: 454caab0c6c050f29b39d82e1d66d0fa -> 
+  custom:scripting/monoscript/fileName/ObjectSpin.cs: 2b96bb2079dd7fa5108d981627a28e1e -> 
+  custom:scripting/monoscript/fileName/CameraController.cs: 34b6be4e23ce86dc89786916c5983296 -> 
+  custom:scripting/monoscript/fileName/TMP_TextInfoDebugTool.cs: 3f1709cfb2cc628169113a35b5e9be3f -> 
+  custom:scripting/monoscript/fileName/BehaviorNode.cs: 45ab94e1905b0881aaadb7101cedafd7 -> 
+  custom:scripting/monoscript/fileName/PlayerWin.cs: 26bd90ab5eede9abcfff9eb3f85eb2a5 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:scripting/monoscript/fileName/to_end.cs: 914809bebb9cebbb22c6b7428d299319 -> 
+  custom:scripting/monoscript/fileName/ZombieSpawner.cs: d75371d327ed155022385343c4d65f0c -> 
+  custom:scripting/monoscript/fileName/BehaviorManager.cs: 06545da0d7f6a19c1aa8e3b068454e22 -> 
+  custom:scripting/monoscript/fileName/HPctroller.cs: 2b57f61fb9a11a42f59b0c7935d5b38f -> 
+  custom:scripting/monoscript/fileName/AttackBehavior.cs: dad1d2beb3d4478f4b7b1503ee555519 -> 
+  custom:scripting/monoscript/fileName/Chager.cs: 44a3fc1b9cde053fdc48fe9f6d5db2e7 -> 
+  custom:scripting/monoscript/fileName/TMP_TextSelector_A.cs: 347309a09d56e367b188a6978f75b424 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/gunn.cs: aab30c74a7667fdef217ffb7e1872f35 -> 
+  custom:scripting/monoscript/fileName/Spiderbehavior.cs: b23c04a72171da1bfba3c740e359e309 -> 
+  custom:scripting/monoscript/fileName/VertexJitter.cs: d27eb5498e48714a66aece98da065133 -> 
+  custom:scripting/monoscript/fileName/Bullet.cs: 21b72f633b0ae24658c2b58406350175 -> 
+  custom:scripting/monoscript/fileName/adjustpivot.cs: 20efc8e4a113e664b25c006bb635eedb -> 
+  custom:scripting/monoscript/fileName/TextConsoleSimulator.cs: 33fc311abb20b5b0ed8f00e4d86b574e -> 
+  custom:scripting/monoscript/fileName/VertexColorCycler.cs: 5f984ca91cf3609293aecc6bc5641572 -> 
+  custom:scripting/monoscript/fileName/TMP_FrameRateCounter.cs: 46f655df8cb483ac5958307137b1585a -> 
+  custom:scripting/monoscript/fileName/VertexShakeB.cs: a6f78c4fcda1a29a1a1c1baefedba9e7 -> 
+  custom:scripting/monoscript/fileName/TMP_UiFrameRateCounter.cs: b01021aea19247f14a98ab338907956a -> 
+  custom:scripting/monoscript/fileName/end-sp.cs: 9933fbcc6190e2a9171c2ec8808a053e -> 
+  custom:scripting/monoscript/fileName/enemyIsTraggered.cs: edf43e5c33fad5cf7be86604e7f96c62 -> 
+  custom:scripting/monoscript/fileName/TMPro_InstructionOverlay.cs: b626d2270e6ebd5c4311585c18b58d8d -> 
+  custom:scripting/monoscript/fileName/TMP_DigitValidator.cs: ac02af96215ae3951a3cce9e1a8c6085 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/Benchmark01_UGUI.cs: 6148cfe2627b7708298f301788144139 -> 
+  custom:scripting/monoscript/fileName/HurtBehavior.cs: d8d14f9524e3ec31db0c9d9a7c7f6efd -> 
+  custom:scripting/monoscript/fileName/AllyHealth.cs: 0ddabf7f22a5092033f70d462b51f7eb -> 
+  custom:scripting/monoscript/fileName/MouseManager.cs: 6ac4e4e03984271fd1f80dcdcecc1ff0 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 467f6359a6c78145b4e03802ae5d67d9 -> 
+  custom:scripting/monoscript/fileName/Benchmark03.cs: 17cc87e0529ac71d909a946afb47a274 -> 
+  custom:scripting/monoscript/fileName/end.cs: b39d91587c2553fd886ac9cec92f1e80 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2079.609687 seconds.
+  path: Assets/factory.prefab
+  artifactKey: Guid(914653a0eef9c4fed95fc6166fe2e8d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/factory.prefab using Guid(914653a0eef9c4fed95fc6166fe2e8d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '922901df454c8c1e30654bdcea2f1d4b') in 0.002914 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.790 seconds
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.238 seconds
+Domain Reload Profiling: 3028ms
+	BeginReloadAssembly (322ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (38ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (63ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (72ms)
+	LoadAllAssembliesAndSetupDomain (354ms)
+		LoadAssemblies (480ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (34ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (10ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (2239ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1574ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (19ms)
+			SetLoadedEditorAssemblies (9ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (121ms)
+			ProcessInitializeOnLoadAttributes (1327ms)
+			ProcessInitializeOnLoadMethodAttributes (97ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 0.90 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3555 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 16 unused Assets / (102.8 KB). Loaded Objects now: 4081.
+Memory consumption went from 153.3 MB to 153.2 MB.
+Total: 2.735125 ms (FindLiveObjects: 0.216083 ms CreateObjectMapping: 0.077917 ms MarkObjects: 2.329667 ms  DeleteObjects: 0.110708 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/debug.cs: e2517872633b57a755ac2fe56c8b791f -> 
+  custom:scripting/monoscript/fileName/SkewTextExample.cs: c142d02d70a129e0533975f7c2f96956 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/HunterHurt.cs: 3c9ee58aeb68753e8642aab13eb03485 -> 
+  custom:scripting/monoscript/fileName/AIAlly.cs: f6afb23c3f923e134722d6737b2347fc -> 
+  custom:scripting/monoscript/fileName/TMP_TextEventHandler.cs: f5cd9d5a43bfefc8f4fec80e6de896a4 -> 
+  custom:scripting/monoscript/fileName/HurtHunter.cs: 497699802a3c92196250428bcc0729d7 -> 
+  custom:scripting/monoscript/fileName/TextMeshProFloatingText.cs: 92608fa4a6315cd0786d82205e77b697 -> 
+  custom:scripting/monoscript/fileName/spiderbullet.cs: 14a9c89f4f8d94245c4c1c2bb6c816fe -> 
+  custom:scripting/monoscript/fileName/VertexZoom.cs: 650ab1e81d40126e3edcf737cce646e4 -> 
+  custom:scripting/monoscript/fileName/follow.cs: 04d7b2a4d28d75b3f1c1084a58bf5a59 -> 
+  custom:scripting/monoscript/fileName/VertexShakeA.cs: 63ec564c588058369499638dd899e05b -> 
+  custom:scripting/monoscript/fileName/TMP_ExampleScript_01.cs: a9d4be556104ff54e7d240529b3e01dc -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/TMP_TextEventCheck.cs: 13505d917eab5868c435e0c2986dadfa -> 
+  custom:scripting/monoscript/fileName/TMP_TextSelector_B.cs: ba2be21a7486d37b1011342977a2e49d -> 
+  custom:scripting/monoscript/fileName/Benchmark01.cs: 2d3e2cd961730ab95f139a49a673bace -> 
+  custom:scripting/monoscript/fileName/TeammateHealth.cs: d766b36d28699f9402cf10f92342f4c9 -> 
+  custom:scripting/monoscript/fileName/HealthPack.cs: 8e973d3886b3e90911f4ec3c267b8bd0 -> 
+  custom:scripting/monoscript/fileName/Gun.cs: 7d05faef1ad0b187da47b70860e6ba9a -> 
+  custom:scripting/monoscript/fileName/EnemyHealth.cs: a4d027726692f4f1a1dc379aafbb87e2 -> 
+  custom:scripting/monoscript/fileName/Benchmark02.cs: 5640963252ce70910e726415f869ced6 -> 
+  custom:scripting/monoscript/fileName/PlayerController.cs: d93a52a180fbbe603a59e9aa6da73c83 -> 
+  custom:scripting/monoscript/fileName/DropdownSample.cs: 0a92251794e5f10400149f96c3c59e5d -> 
+  custom:scripting/monoscript/fileName/chagerBehave.cs: 9772a7da78e9a6b8c2c785182150dd54 -> 
+  custom:scripting/monoscript/fileName/WarpTextExample.cs: 2663459c266363641981c7d17b698d7f -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/gamecontroller.cs: 98325445a751e7b172e393a70fb0c490 -> 
+  custom:scripting/monoscript/fileName/RunBehavior.cs: 7250af83c279eaeb3ec78fd36714ea11 -> 
+  custom:scripting/monoscript/fileName/follow2.cs: 2d4fd536faa07a1a4f49376d0a036b46 -> 
+  custom:scripting/monoscript/fileName/ChatController.cs: 876d5ccae6e345dd5d9450eb0a748f16 -> 
+  custom:scripting/monoscript/fileName/DieBehavior.cs: c2d92effbe3bb7ddb1d8592dc77f33a4 -> 
+  custom:scripting/monoscript/fileName/TextMeshSpawner.cs: 76f28e2ddb031571e6ec62b018f65fa8 -> 
+  custom:scripting/monoscript/fileName/TeleType.cs: 31fa97821c4c70f157ec81d507aa6b62 -> 
+  custom:scripting/monoscript/fileName/Benchmark04.cs: 32220b148620e52aa81c13a114862bf4 -> 
+  custom:scripting/monoscript/fileName/AStarPathfinding.cs: f6cd5308ea26addd7c2d61946aeaccc3 -> 
+  custom:scripting/monoscript/fileName/gun2.cs: dcaa0b364a75c4693071d907fa24a61a -> 
+  custom:scripting/monoscript/fileName/open.cs: 3f5a50cb221c02d81e281d8bd5f61854 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/TMP_PhoneNumberValidator.cs: 7c3049f481e464c6a9a15dee56c3126f -> 
+  custom:scripting/monoscript/fileName/AttackBehaviorSpitter.cs: 5b7042fd047968627ba28b2c7bcb7550 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:scripting/monoscript/fileName/PatrolBehavior.cs: dcf73cf8fa64b452380a92985f83ba4b -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:scripting/monoscript/fileName/EnvMapAnimator.cs: 1b4f61c17e4b7283c3ac351aacff9d26 -> 
+  custom:scripting/monoscript/fileName/ShaderPropAnimator.cs: 55ce425812446482e623ff2695c94cb2 -> 
+  custom:scripting/monoscript/fileName/PlayerHealth.cs: 49f415306e52895faa0b0a35d62e54a1 -> 
+  custom:scripting/monoscript/fileName/SimpleScript.cs: 454caab0c6c050f29b39d82e1d66d0fa -> 
+  custom:scripting/monoscript/fileName/ObjectSpin.cs: 2b96bb2079dd7fa5108d981627a28e1e -> 
+  custom:scripting/monoscript/fileName/CameraController.cs: 34b6be4e23ce86dc89786916c5983296 -> 
+  custom:scripting/monoscript/fileName/TMP_TextInfoDebugTool.cs: 3f1709cfb2cc628169113a35b5e9be3f -> 
+  custom:scripting/monoscript/fileName/BehaviorNode.cs: 45ab94e1905b0881aaadb7101cedafd7 -> 
+  custom:scripting/monoscript/fileName/PlayerWin.cs: 26bd90ab5eede9abcfff9eb3f85eb2a5 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:scripting/monoscript/fileName/to_end.cs: 914809bebb9cebbb22c6b7428d299319 -> 
+  custom:scripting/monoscript/fileName/ZombieSpawner.cs: d75371d327ed155022385343c4d65f0c -> 
+  custom:scripting/monoscript/fileName/BehaviorManager.cs: 06545da0d7f6a19c1aa8e3b068454e22 -> 
+  custom:scripting/monoscript/fileName/HPctroller.cs: 2b57f61fb9a11a42f59b0c7935d5b38f -> 
+  custom:scripting/monoscript/fileName/AttackBehavior.cs: dad1d2beb3d4478f4b7b1503ee555519 -> 
+  custom:scripting/monoscript/fileName/Chager.cs: 44a3fc1b9cde053fdc48fe9f6d5db2e7 -> 
+  custom:scripting/monoscript/fileName/TMP_TextSelector_A.cs: 347309a09d56e367b188a6978f75b424 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/gunn.cs: aab30c74a7667fdef217ffb7e1872f35 -> 
+  custom:scripting/monoscript/fileName/Spiderbehavior.cs: b23c04a72171da1bfba3c740e359e309 -> 
+  custom:scripting/monoscript/fileName/VertexJitter.cs: d27eb5498e48714a66aece98da065133 -> 
+  custom:scripting/monoscript/fileName/Bullet.cs: 21b72f633b0ae24658c2b58406350175 -> 
+  custom:scripting/monoscript/fileName/adjustpivot.cs: 20efc8e4a113e664b25c006bb635eedb -> 
+  custom:scripting/monoscript/fileName/TextConsoleSimulator.cs: 33fc311abb20b5b0ed8f00e4d86b574e -> 
+  custom:scripting/monoscript/fileName/VertexColorCycler.cs: 5f984ca91cf3609293aecc6bc5641572 -> 
+  custom:scripting/monoscript/fileName/TMP_FrameRateCounter.cs: 46f655df8cb483ac5958307137b1585a -> 
+  custom:scripting/monoscript/fileName/VertexShakeB.cs: a6f78c4fcda1a29a1a1c1baefedba9e7 -> 
+  custom:scripting/monoscript/fileName/TMP_UiFrameRateCounter.cs: b01021aea19247f14a98ab338907956a -> 
+  custom:scripting/monoscript/fileName/end-sp.cs: 9933fbcc6190e2a9171c2ec8808a053e -> 
+  custom:scripting/monoscript/fileName/enemyIsTraggered.cs: edf43e5c33fad5cf7be86604e7f96c62 -> 
+  custom:scripting/monoscript/fileName/TMPro_InstructionOverlay.cs: b626d2270e6ebd5c4311585c18b58d8d -> 
+  custom:scripting/monoscript/fileName/TMP_DigitValidator.cs: ac02af96215ae3951a3cce9e1a8c6085 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/Benchmark01_UGUI.cs: 6148cfe2627b7708298f301788144139 -> 
+  custom:scripting/monoscript/fileName/HurtBehavior.cs: d8d14f9524e3ec31db0c9d9a7c7f6efd -> 
+  custom:scripting/monoscript/fileName/AllyHealth.cs: 0ddabf7f22a5092033f70d462b51f7eb -> 
+  custom:scripting/monoscript/fileName/MouseManager.cs: 6ac4e4e03984271fd1f80dcdcecc1ff0 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 467f6359a6c78145b4e03802ae5d67d9 -> 
+  custom:scripting/monoscript/fileName/Benchmark03.cs: 17cc87e0529ac71d909a946afb47a274 -> 
+  custom:scripting/monoscript/fileName/end.cs: b39d91587c2553fd886ac9cec92f1e80 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 110.535042 seconds.
+  path: Assets/factory.prefab
+  artifactKey: Guid(914653a0eef9c4fed95fc6166fe2e8d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/factory.prefab using Guid(914653a0eef9c4fed95fc6166fe2e8d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '922901df454c8c1e30654bdcea2f1d4b') in 0.003326 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.661 seconds
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.137 seconds
+Domain Reload Profiling: 2799ms
+	BeginReloadAssembly (266ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (32ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (46ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (55ms)
+	LoadAllAssembliesAndSetupDomain (300ms)
+		LoadAssemblies (414ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
 		AnalyzeDomain (20ms)
 			TypeCache.Refresh (7ms)
 				TypeCache.ScanAssembly (0ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (12ms)
-	FinalizeReload (1988ms)
+	FinalizeReload (2138ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1559ms)
+		SetupLoadedEditorAssemblies (1521ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (19ms)
+			InitializePlatformSupportModulesInManaged (41ms)
 			SetLoadedEditorAssemblies (8ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (116ms)
-			ProcessInitializeOnLoadAttributes (1313ms)
-			ProcessInitializeOnLoadMethodAttributes (103ms)
+			BeforeProcessingInitializeOnLoad (121ms)
+			ProcessInitializeOnLoadAttributes (1255ms)
+			ProcessInitializeOnLoadMethodAttributes (94ms)
 			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
-Refreshing native plugins compatible for Editor in 0.91 ms, found 2 plugins.
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 1.05 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3548 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 17 unused Assets / (78.7 KB). Loaded Objects now: 4056.
-Memory consumption went from 142.1 MB to 142.0 MB.
-Total: 2.825583 ms (FindLiveObjects: 0.209208 ms CreateObjectMapping: 0.076000 ms MarkObjects: 2.434375 ms  DeleteObjects: 0.105250 ms)
+Unloading 3555 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 16 unused Assets / (102.6 KB). Loaded Objects now: 4084.
+Memory consumption went from 158.1 MB to 158.0 MB.
+Total: 2.694041 ms (FindLiveObjects: 0.194875 ms CreateObjectMapping: 0.086416 ms MarkObjects: 2.316708 ms  DeleteObjects: 0.095500 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/debug.cs: e2517872633b57a755ac2fe56c8b791f -> 
+  custom:scripting/monoscript/fileName/SkewTextExample.cs: c142d02d70a129e0533975f7c2f96956 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/HunterHurt.cs: 3c9ee58aeb68753e8642aab13eb03485 -> 
+  custom:scripting/monoscript/fileName/AIAlly.cs: f6afb23c3f923e134722d6737b2347fc -> 
+  custom:scripting/monoscript/fileName/TMP_TextEventHandler.cs: f5cd9d5a43bfefc8f4fec80e6de896a4 -> 
+  custom:scripting/monoscript/fileName/HurtHunter.cs: 497699802a3c92196250428bcc0729d7 -> 
+  custom:scripting/monoscript/fileName/TextMeshProFloatingText.cs: 92608fa4a6315cd0786d82205e77b697 -> 
+  custom:scripting/monoscript/fileName/spiderbullet.cs: 14a9c89f4f8d94245c4c1c2bb6c816fe -> 
+  custom:scripting/monoscript/fileName/VertexZoom.cs: 650ab1e81d40126e3edcf737cce646e4 -> 
+  custom:scripting/monoscript/fileName/follow.cs: 04d7b2a4d28d75b3f1c1084a58bf5a59 -> 
+  custom:scripting/monoscript/fileName/VertexShakeA.cs: 63ec564c588058369499638dd899e05b -> 
+  custom:scripting/monoscript/fileName/TMP_ExampleScript_01.cs: a9d4be556104ff54e7d240529b3e01dc -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/TMP_TextEventCheck.cs: 13505d917eab5868c435e0c2986dadfa -> 
+  custom:scripting/monoscript/fileName/TMP_TextSelector_B.cs: ba2be21a7486d37b1011342977a2e49d -> 
+  custom:scripting/monoscript/fileName/Benchmark01.cs: 2d3e2cd961730ab95f139a49a673bace -> 
+  custom:scripting/monoscript/fileName/TeammateHealth.cs: d766b36d28699f9402cf10f92342f4c9 -> 
+  custom:scripting/monoscript/fileName/HealthPack.cs: 8e973d3886b3e90911f4ec3c267b8bd0 -> 
+  custom:scripting/monoscript/fileName/Gun.cs: 7d05faef1ad0b187da47b70860e6ba9a -> 
+  custom:scripting/monoscript/fileName/EnemyHealth.cs: a4d027726692f4f1a1dc379aafbb87e2 -> 
+  custom:scripting/monoscript/fileName/Benchmark02.cs: 5640963252ce70910e726415f869ced6 -> 
+  custom:scripting/monoscript/fileName/PlayerController.cs: d93a52a180fbbe603a59e9aa6da73c83 -> 
+  custom:scripting/monoscript/fileName/DropdownSample.cs: 0a92251794e5f10400149f96c3c59e5d -> 
+  custom:scripting/monoscript/fileName/chagerBehave.cs: 9772a7da78e9a6b8c2c785182150dd54 -> 
+  custom:scripting/monoscript/fileName/WarpTextExample.cs: 2663459c266363641981c7d17b698d7f -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/gamecontroller.cs: 98325445a751e7b172e393a70fb0c490 -> 
+  custom:scripting/monoscript/fileName/RunBehavior.cs: 7250af83c279eaeb3ec78fd36714ea11 -> 
+  custom:scripting/monoscript/fileName/follow2.cs: 2d4fd536faa07a1a4f49376d0a036b46 -> 
+  custom:scripting/monoscript/fileName/ChatController.cs: 876d5ccae6e345dd5d9450eb0a748f16 -> 
+  custom:scripting/monoscript/fileName/DieBehavior.cs: c2d92effbe3bb7ddb1d8592dc77f33a4 -> 
+  custom:scripting/monoscript/fileName/TextMeshSpawner.cs: 76f28e2ddb031571e6ec62b018f65fa8 -> 
+  custom:scripting/monoscript/fileName/TeleType.cs: 31fa97821c4c70f157ec81d507aa6b62 -> 
+  custom:scripting/monoscript/fileName/Benchmark04.cs: 32220b148620e52aa81c13a114862bf4 -> 
+  custom:scripting/monoscript/fileName/AStarPathfinding.cs: f6cd5308ea26addd7c2d61946aeaccc3 -> 
+  custom:scripting/monoscript/fileName/gun2.cs: dcaa0b364a75c4693071d907fa24a61a -> 
+  custom:scripting/monoscript/fileName/open.cs: 3f5a50cb221c02d81e281d8bd5f61854 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/TMP_PhoneNumberValidator.cs: 7c3049f481e464c6a9a15dee56c3126f -> 
+  custom:scripting/monoscript/fileName/AttackBehaviorSpitter.cs: 5b7042fd047968627ba28b2c7bcb7550 -> 
   custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:scripting/monoscript/fileName/PatrolBehavior.cs: dcf73cf8fa64b452380a92985f83ba4b -> 
   custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:scripting/monoscript/fileName/EnvMapAnimator.cs: 1b4f61c17e4b7283c3ac351aacff9d26 -> 
+  custom:scripting/monoscript/fileName/ShaderPropAnimator.cs: 55ce425812446482e623ff2695c94cb2 -> 
+  custom:scripting/monoscript/fileName/PlayerHealth.cs: 49f415306e52895faa0b0a35d62e54a1 -> 
+  custom:scripting/monoscript/fileName/SimpleScript.cs: 454caab0c6c050f29b39d82e1d66d0fa -> 
+  custom:scripting/monoscript/fileName/ObjectSpin.cs: 2b96bb2079dd7fa5108d981627a28e1e -> 
+  custom:scripting/monoscript/fileName/CameraController.cs: 34b6be4e23ce86dc89786916c5983296 -> 
+  custom:scripting/monoscript/fileName/TMP_TextInfoDebugTool.cs: 3f1709cfb2cc628169113a35b5e9be3f -> 
+  custom:scripting/monoscript/fileName/BehaviorNode.cs: 45ab94e1905b0881aaadb7101cedafd7 -> 
+  custom:scripting/monoscript/fileName/PlayerWin.cs: 26bd90ab5eede9abcfff9eb3f85eb2a5 -> 
   custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:scripting/monoscript/fileName/to_end.cs: 914809bebb9cebbb22c6b7428d299319 -> 
+  custom:scripting/monoscript/fileName/ZombieSpawner.cs: d75371d327ed155022385343c4d65f0c -> 
+  custom:scripting/monoscript/fileName/BehaviorManager.cs: 06545da0d7f6a19c1aa8e3b068454e22 -> 
+  custom:scripting/monoscript/fileName/HPctroller.cs: 2b57f61fb9a11a42f59b0c7935d5b38f -> 
+  custom:scripting/monoscript/fileName/AttackBehavior.cs: dad1d2beb3d4478f4b7b1503ee555519 -> 
+  custom:scripting/monoscript/fileName/Chager.cs: 44a3fc1b9cde053fdc48fe9f6d5db2e7 -> 
+  custom:scripting/monoscript/fileName/TMP_TextSelector_A.cs: 347309a09d56e367b188a6978f75b424 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/gunn.cs: aab30c74a7667fdef217ffb7e1872f35 -> 
+  custom:scripting/monoscript/fileName/Spiderbehavior.cs: b23c04a72171da1bfba3c740e359e309 -> 
+  custom:scripting/monoscript/fileName/VertexJitter.cs: d27eb5498e48714a66aece98da065133 -> 
+  custom:scripting/monoscript/fileName/Bullet.cs: 21b72f633b0ae24658c2b58406350175 -> 
+  custom:scripting/monoscript/fileName/adjustpivot.cs: 20efc8e4a113e664b25c006bb635eedb -> 
+  custom:scripting/monoscript/fileName/TextConsoleSimulator.cs: 33fc311abb20b5b0ed8f00e4d86b574e -> 
+  custom:scripting/monoscript/fileName/VertexColorCycler.cs: 5f984ca91cf3609293aecc6bc5641572 -> 
+  custom:scripting/monoscript/fileName/TMP_FrameRateCounter.cs: 46f655df8cb483ac5958307137b1585a -> 
+  custom:scripting/monoscript/fileName/VertexShakeB.cs: a6f78c4fcda1a29a1a1c1baefedba9e7 -> 
+  custom:scripting/monoscript/fileName/TMP_UiFrameRateCounter.cs: b01021aea19247f14a98ab338907956a -> 
+  custom:scripting/monoscript/fileName/end-sp.cs: 9933fbcc6190e2a9171c2ec8808a053e -> 
+  custom:scripting/monoscript/fileName/enemyIsTraggered.cs: edf43e5c33fad5cf7be86604e7f96c62 -> 
+  custom:scripting/monoscript/fileName/TMPro_InstructionOverlay.cs: b626d2270e6ebd5c4311585c18b58d8d -> 
+  custom:scripting/monoscript/fileName/TMP_DigitValidator.cs: ac02af96215ae3951a3cce9e1a8c6085 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/Benchmark01_UGUI.cs: 6148cfe2627b7708298f301788144139 -> 
+  custom:scripting/monoscript/fileName/HurtBehavior.cs: d8d14f9524e3ec31db0c9d9a7c7f6efd -> 
+  custom:scripting/monoscript/fileName/AllyHealth.cs: 0ddabf7f22a5092033f70d462b51f7eb -> 
+  custom:scripting/monoscript/fileName/MouseManager.cs: 6ac4e4e03984271fd1f80dcdcecc1ff0 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 467f6359a6c78145b4e03802ae5d67d9 -> 
+  custom:scripting/monoscript/fileName/Benchmark03.cs: 17cc87e0529ac71d909a946afb47a274 -> 
+  custom:scripting/monoscript/fileName/end.cs: b39d91587c2553fd886ac9cec92f1e80 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 73.612289 seconds.
+  path: Assets/factory.prefab
+  artifactKey: Guid(914653a0eef9c4fed95fc6166fe2e8d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/factory.prefab using Guid(914653a0eef9c4fed95fc6166fe2e8d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '922901df454c8c1e30654bdcea2f1d4b') in 0.002903 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Prepare
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.665 seconds
+- Loaded All Assemblies, in  0.757 seconds
 Native extension for OSXStandalone target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.221 seconds
-Domain Reload Profiling: 2888ms
-	BeginReloadAssembly (270ms)
+- Finished resetting the current domain, in  2.291 seconds
+Domain Reload Profiling: 3050ms
+	BeginReloadAssembly (326ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (34ms)
+		DisableScriptedObjects (40ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (46ms)
+		CreateAndSetChildDomain (63ms)
 	RebuildCommonClasses (32ms)
 	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (60ms)
-	LoadAllAssembliesAndSetupDomain (294ms)
-		LoadAssemblies (410ms)
+	initialDomainReloadingComplete (64ms)
+	LoadAllAssembliesAndSetupDomain (326ms)
+		LoadAssemblies (465ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (19ms)
+		AnalyzeDomain (20ms)
 			TypeCache.Refresh (7ms)
 				TypeCache.ScanAssembly (0ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (12ms)
-	FinalizeReload (2222ms)
+	FinalizeReload (2292ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1567ms)
+		SetupLoadedEditorAssemblies (1586ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (17ms)
-			SetLoadedEditorAssemblies (8ms)
+			SetLoadedEditorAssemblies (9ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (118ms)
-			ProcessInitializeOnLoadAttributes (1324ms)
-			ProcessInitializeOnLoadMethodAttributes (99ms)
+			BeforeProcessingInitializeOnLoad (121ms)
+			ProcessInitializeOnLoadAttributes (1315ms)
+			ProcessInitializeOnLoadMethodAttributes (123ms)
 			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (12ms)
-Refreshing native plugins compatible for Editor in 1.64 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 2.12 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3548 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 17 unused Assets / (102.9 KB). Loaded Objects now: 4059.
-Memory consumption went from 146.8 MB to 146.7 MB.
-Total: 2.896500 ms (FindLiveObjects: 0.275583 ms CreateObjectMapping: 0.079875 ms MarkObjects: 2.419542 ms  DeleteObjects: 0.120875 ms)
+Unloading 3555 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 16 unused Assets / (102.5 KB). Loaded Objects now: 4087.
+Memory consumption went from 162.5 MB to 162.4 MB.
+Total: 3.105833 ms (FindLiveObjects: 0.293167 ms CreateObjectMapping: 0.112500 ms MarkObjects: 2.571833 ms  DeleteObjects: 0.127750 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/debug.cs: e2517872633b57a755ac2fe56c8b791f -> 
+  custom:scripting/monoscript/fileName/SkewTextExample.cs: c142d02d70a129e0533975f7c2f96956 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/HunterHurt.cs: 3c9ee58aeb68753e8642aab13eb03485 -> 
+  custom:scripting/monoscript/fileName/AIAlly.cs: f6afb23c3f923e134722d6737b2347fc -> 
+  custom:scripting/monoscript/fileName/TMP_TextEventHandler.cs: f5cd9d5a43bfefc8f4fec80e6de896a4 -> 
+  custom:scripting/monoscript/fileName/HurtHunter.cs: 497699802a3c92196250428bcc0729d7 -> 
+  custom:scripting/monoscript/fileName/TextMeshProFloatingText.cs: 92608fa4a6315cd0786d82205e77b697 -> 
+  custom:scripting/monoscript/fileName/spiderbullet.cs: 14a9c89f4f8d94245c4c1c2bb6c816fe -> 
+  custom:scripting/monoscript/fileName/VertexZoom.cs: 650ab1e81d40126e3edcf737cce646e4 -> 
+  custom:scripting/monoscript/fileName/follow.cs: 04d7b2a4d28d75b3f1c1084a58bf5a59 -> 
+  custom:scripting/monoscript/fileName/VertexShakeA.cs: 63ec564c588058369499638dd899e05b -> 
+  custom:scripting/monoscript/fileName/TMP_ExampleScript_01.cs: a9d4be556104ff54e7d240529b3e01dc -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/TMP_TextEventCheck.cs: 13505d917eab5868c435e0c2986dadfa -> 
+  custom:scripting/monoscript/fileName/TMP_TextSelector_B.cs: ba2be21a7486d37b1011342977a2e49d -> 
+  custom:scripting/monoscript/fileName/Benchmark01.cs: 2d3e2cd961730ab95f139a49a673bace -> 
+  custom:scripting/monoscript/fileName/TeammateHealth.cs: d766b36d28699f9402cf10f92342f4c9 -> 
+  custom:scripting/monoscript/fileName/HealthPack.cs: 8e973d3886b3e90911f4ec3c267b8bd0 -> 
+  custom:scripting/monoscript/fileName/Gun.cs: 7d05faef1ad0b187da47b70860e6ba9a -> 
+  custom:scripting/monoscript/fileName/EnemyHealth.cs: a4d027726692f4f1a1dc379aafbb87e2 -> 
+  custom:scripting/monoscript/fileName/Benchmark02.cs: 5640963252ce70910e726415f869ced6 -> 
+  custom:scripting/monoscript/fileName/PlayerController.cs: d93a52a180fbbe603a59e9aa6da73c83 -> 
+  custom:scripting/monoscript/fileName/DropdownSample.cs: 0a92251794e5f10400149f96c3c59e5d -> 
+  custom:scripting/monoscript/fileName/chagerBehave.cs: 9772a7da78e9a6b8c2c785182150dd54 -> 
+  custom:scripting/monoscript/fileName/WarpTextExample.cs: 2663459c266363641981c7d17b698d7f -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/gamecontroller.cs: 98325445a751e7b172e393a70fb0c490 -> 
+  custom:scripting/monoscript/fileName/RunBehavior.cs: 7250af83c279eaeb3ec78fd36714ea11 -> 
+  custom:scripting/monoscript/fileName/follow2.cs: 2d4fd536faa07a1a4f49376d0a036b46 -> 
+  custom:scripting/monoscript/fileName/ChatController.cs: 876d5ccae6e345dd5d9450eb0a748f16 -> 
+  custom:scripting/monoscript/fileName/DieBehavior.cs: c2d92effbe3bb7ddb1d8592dc77f33a4 -> 
+  custom:scripting/monoscript/fileName/TextMeshSpawner.cs: 76f28e2ddb031571e6ec62b018f65fa8 -> 
+  custom:scripting/monoscript/fileName/TeleType.cs: 31fa97821c4c70f157ec81d507aa6b62 -> 
+  custom:scripting/monoscript/fileName/Benchmark04.cs: 32220b148620e52aa81c13a114862bf4 -> 
+  custom:scripting/monoscript/fileName/AStarPathfinding.cs: f6cd5308ea26addd7c2d61946aeaccc3 -> 
+  custom:scripting/monoscript/fileName/gun2.cs: dcaa0b364a75c4693071d907fa24a61a -> 
+  custom:scripting/monoscript/fileName/open.cs: 3f5a50cb221c02d81e281d8bd5f61854 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/TMP_PhoneNumberValidator.cs: 7c3049f481e464c6a9a15dee56c3126f -> 
+  custom:scripting/monoscript/fileName/AttackBehaviorSpitter.cs: 5b7042fd047968627ba28b2c7bcb7550 -> 
   custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:scripting/monoscript/fileName/PatrolBehavior.cs: dcf73cf8fa64b452380a92985f83ba4b -> 
   custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:scripting/monoscript/fileName/EnvMapAnimator.cs: 1b4f61c17e4b7283c3ac351aacff9d26 -> 
+  custom:scripting/monoscript/fileName/ShaderPropAnimator.cs: 55ce425812446482e623ff2695c94cb2 -> 
+  custom:scripting/monoscript/fileName/PlayerHealth.cs: 49f415306e52895faa0b0a35d62e54a1 -> 
+  custom:scripting/monoscript/fileName/SimpleScript.cs: 454caab0c6c050f29b39d82e1d66d0fa -> 
+  custom:scripting/monoscript/fileName/ObjectSpin.cs: 2b96bb2079dd7fa5108d981627a28e1e -> 
+  custom:scripting/monoscript/fileName/CameraController.cs: 34b6be4e23ce86dc89786916c5983296 -> 
+  custom:scripting/monoscript/fileName/TMP_TextInfoDebugTool.cs: 3f1709cfb2cc628169113a35b5e9be3f -> 
+  custom:scripting/monoscript/fileName/BehaviorNode.cs: 45ab94e1905b0881aaadb7101cedafd7 -> 
+  custom:scripting/monoscript/fileName/PlayerWin.cs: 26bd90ab5eede9abcfff9eb3f85eb2a5 -> 
   custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:scripting/monoscript/fileName/to_end.cs: 914809bebb9cebbb22c6b7428d299319 -> 
+  custom:scripting/monoscript/fileName/ZombieSpawner.cs: d75371d327ed155022385343c4d65f0c -> 
+  custom:scripting/monoscript/fileName/BehaviorManager.cs: 06545da0d7f6a19c1aa8e3b068454e22 -> 
+  custom:scripting/monoscript/fileName/HPctroller.cs: 2b57f61fb9a11a42f59b0c7935d5b38f -> 
+  custom:scripting/monoscript/fileName/AttackBehavior.cs: dad1d2beb3d4478f4b7b1503ee555519 -> 
+  custom:scripting/monoscript/fileName/Chager.cs: 44a3fc1b9cde053fdc48fe9f6d5db2e7 -> 
+  custom:scripting/monoscript/fileName/TMP_TextSelector_A.cs: 347309a09d56e367b188a6978f75b424 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/gunn.cs: aab30c74a7667fdef217ffb7e1872f35 -> 
+  custom:scripting/monoscript/fileName/Spiderbehavior.cs: b23c04a72171da1bfba3c740e359e309 -> 
+  custom:scripting/monoscript/fileName/VertexJitter.cs: d27eb5498e48714a66aece98da065133 -> 
+  custom:scripting/monoscript/fileName/Bullet.cs: 21b72f633b0ae24658c2b58406350175 -> 
+  custom:scripting/monoscript/fileName/adjustpivot.cs: 20efc8e4a113e664b25c006bb635eedb -> 
+  custom:scripting/monoscript/fileName/TextConsoleSimulator.cs: 33fc311abb20b5b0ed8f00e4d86b574e -> 
+  custom:scripting/monoscript/fileName/VertexColorCycler.cs: 5f984ca91cf3609293aecc6bc5641572 -> 
+  custom:scripting/monoscript/fileName/TMP_FrameRateCounter.cs: 46f655df8cb483ac5958307137b1585a -> 
+  custom:scripting/monoscript/fileName/VertexShakeB.cs: a6f78c4fcda1a29a1a1c1baefedba9e7 -> 
+  custom:scripting/monoscript/fileName/TMP_UiFrameRateCounter.cs: b01021aea19247f14a98ab338907956a -> 
+  custom:scripting/monoscript/fileName/end-sp.cs: 9933fbcc6190e2a9171c2ec8808a053e -> 
+  custom:scripting/monoscript/fileName/enemyIsTraggered.cs: edf43e5c33fad5cf7be86604e7f96c62 -> 
+  custom:scripting/monoscript/fileName/TMPro_InstructionOverlay.cs: b626d2270e6ebd5c4311585c18b58d8d -> 
+  custom:scripting/monoscript/fileName/TMP_DigitValidator.cs: ac02af96215ae3951a3cce9e1a8c6085 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-TcpMessagingSession - receive error
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
-AssetImportWorker is now disconnected from the server
-Process exiting
+  custom:scripting/monoscript/fileName/Benchmark01_UGUI.cs: 6148cfe2627b7708298f301788144139 -> 
+  custom:scripting/monoscript/fileName/HurtBehavior.cs: d8d14f9524e3ec31db0c9d9a7c7f6efd -> 
+  custom:scripting/monoscript/fileName/AllyHealth.cs: 0ddabf7f22a5092033f70d462b51f7eb -> 
+  custom:scripting/monoscript/fileName/MouseManager.cs: 6ac4e4e03984271fd1f80dcdcecc1ff0 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 467f6359a6c78145b4e03802ae5d67d9 -> 
+  custom:scripting/monoscript/fileName/Benchmark03.cs: 17cc87e0529ac71d909a946afb47a274 -> 
+  custom:scripting/monoscript/fileName/end.cs: b39d91587c2553fd886ac9cec92f1e80 -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.681 seconds
+Native extension for OSXStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.251 seconds
+Domain Reload Profiling: 2935ms
+	BeginReloadAssembly (272ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (36ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (45ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (61ms)
+	LoadAllAssembliesAndSetupDomain (307ms)
+		LoadAssemblies (423ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (19ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (2253ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1581ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (9ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (121ms)
+			ProcessInitializeOnLoadAttributes (1326ms)
+			ProcessInitializeOnLoadMethodAttributes (106ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 1.96 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3555 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 16 unused Assets / (78.5 KB). Loaded Objects now: 4090.
+Memory consumption went from 167.0 MB to 166.9 MB.
+Total: 3.053875 ms (FindLiveObjects: 0.273792 ms CreateObjectMapping: 0.078416 ms MarkObjects: 2.572834 ms  DeleteObjects: 0.128125 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/debug.cs: e2517872633b57a755ac2fe56c8b791f -> 
+  custom:scripting/monoscript/fileName/SkewTextExample.cs: c142d02d70a129e0533975f7c2f96956 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/HunterHurt.cs: 3c9ee58aeb68753e8642aab13eb03485 -> 
+  custom:scripting/monoscript/fileName/AIAlly.cs: f6afb23c3f923e134722d6737b2347fc -> 
+  custom:scripting/monoscript/fileName/TMP_TextEventHandler.cs: f5cd9d5a43bfefc8f4fec80e6de896a4 -> 
+  custom:scripting/monoscript/fileName/HurtHunter.cs: 497699802a3c92196250428bcc0729d7 -> 
+  custom:scripting/monoscript/fileName/TextMeshProFloatingText.cs: 92608fa4a6315cd0786d82205e77b697 -> 
+  custom:scripting/monoscript/fileName/spiderbullet.cs: 14a9c89f4f8d94245c4c1c2bb6c816fe -> 
+  custom:scripting/monoscript/fileName/VertexZoom.cs: 650ab1e81d40126e3edcf737cce646e4 -> 
+  custom:scripting/monoscript/fileName/follow.cs: 04d7b2a4d28d75b3f1c1084a58bf5a59 -> 
+  custom:scripting/monoscript/fileName/VertexShakeA.cs: 63ec564c588058369499638dd899e05b -> 
+  custom:scripting/monoscript/fileName/TMP_ExampleScript_01.cs: a9d4be556104ff54e7d240529b3e01dc -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/TMP_TextEventCheck.cs: 13505d917eab5868c435e0c2986dadfa -> 
+  custom:scripting/monoscript/fileName/TMP_TextSelector_B.cs: ba2be21a7486d37b1011342977a2e49d -> 
+  custom:scripting/monoscript/fileName/Benchmark01.cs: 2d3e2cd961730ab95f139a49a673bace -> 
+  custom:scripting/monoscript/fileName/TeammateHealth.cs: d766b36d28699f9402cf10f92342f4c9 -> 
+  custom:scripting/monoscript/fileName/HealthPack.cs: 8e973d3886b3e90911f4ec3c267b8bd0 -> 
+  custom:scripting/monoscript/fileName/Gun.cs: 7d05faef1ad0b187da47b70860e6ba9a -> 
+  custom:scripting/monoscript/fileName/EnemyHealth.cs: a4d027726692f4f1a1dc379aafbb87e2 -> 
+  custom:scripting/monoscript/fileName/Benchmark02.cs: 5640963252ce70910e726415f869ced6 -> 
+  custom:scripting/monoscript/fileName/PlayerController.cs: d93a52a180fbbe603a59e9aa6da73c83 -> 
+  custom:scripting/monoscript/fileName/DropdownSample.cs: 0a92251794e5f10400149f96c3c59e5d -> 
+  custom:scripting/monoscript/fileName/chagerBehave.cs: 9772a7da78e9a6b8c2c785182150dd54 -> 
+  custom:scripting/monoscript/fileName/WarpTextExample.cs: 2663459c266363641981c7d17b698d7f -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/gamecontroller.cs: 98325445a751e7b172e393a70fb0c490 -> 
+  custom:scripting/monoscript/fileName/RunBehavior.cs: 7250af83c279eaeb3ec78fd36714ea11 -> 
+  custom:scripting/monoscript/fileName/follow2.cs: 2d4fd536faa07a1a4f49376d0a036b46 -> 
+  custom:scripting/monoscript/fileName/ChatController.cs: 876d5ccae6e345dd5d9450eb0a748f16 -> 
+  custom:scripting/monoscript/fileName/DieBehavior.cs: c2d92effbe3bb7ddb1d8592dc77f33a4 -> 
+  custom:scripting/monoscript/fileName/TextMeshSpawner.cs: 76f28e2ddb031571e6ec62b018f65fa8 -> 
+  custom:scripting/monoscript/fileName/TeleType.cs: 31fa97821c4c70f157ec81d507aa6b62 -> 
+  custom:scripting/monoscript/fileName/Benchmark04.cs: 32220b148620e52aa81c13a114862bf4 -> 
+  custom:scripting/monoscript/fileName/AStarPathfinding.cs: f6cd5308ea26addd7c2d61946aeaccc3 -> 
+  custom:scripting/monoscript/fileName/gun2.cs: dcaa0b364a75c4693071d907fa24a61a -> 
+  custom:scripting/monoscript/fileName/open.cs: 3f5a50cb221c02d81e281d8bd5f61854 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/TMP_PhoneNumberValidator.cs: 7c3049f481e464c6a9a15dee56c3126f -> 
+  custom:scripting/monoscript/fileName/AttackBehaviorSpitter.cs: 5b7042fd047968627ba28b2c7bcb7550 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:scripting/monoscript/fileName/PatrolBehavior.cs: dcf73cf8fa64b452380a92985f83ba4b -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:scripting/monoscript/fileName/EnvMapAnimator.cs: 1b4f61c17e4b7283c3ac351aacff9d26 -> 
+  custom:scripting/monoscript/fileName/ShaderPropAnimator.cs: 55ce425812446482e623ff2695c94cb2 -> 
+  custom:scripting/monoscript/fileName/PlayerHealth.cs: 49f415306e52895faa0b0a35d62e54a1 -> 
+  custom:scripting/monoscript/fileName/SimpleScript.cs: 454caab0c6c050f29b39d82e1d66d0fa -> 
+  custom:scripting/monoscript/fileName/ObjectSpin.cs: 2b96bb2079dd7fa5108d981627a28e1e -> 
+  custom:scripting/monoscript/fileName/CameraController.cs: 34b6be4e23ce86dc89786916c5983296 -> 
+  custom:scripting/monoscript/fileName/TMP_TextInfoDebugTool.cs: 3f1709cfb2cc628169113a35b5e9be3f -> 
+  custom:scripting/monoscript/fileName/BehaviorNode.cs: 45ab94e1905b0881aaadb7101cedafd7 -> 
+  custom:scripting/monoscript/fileName/PlayerWin.cs: 26bd90ab5eede9abcfff9eb3f85eb2a5 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:scripting/monoscript/fileName/to_end.cs: 914809bebb9cebbb22c6b7428d299319 -> 
+  custom:scripting/monoscript/fileName/ZombieSpawner.cs: d75371d327ed155022385343c4d65f0c -> 
+  custom:scripting/monoscript/fileName/BehaviorManager.cs: 06545da0d7f6a19c1aa8e3b068454e22 -> 
+  custom:scripting/monoscript/fileName/HPctroller.cs: 2b57f61fb9a11a42f59b0c7935d5b38f -> 
+  custom:scripting/monoscript/fileName/AttackBehavior.cs: dad1d2beb3d4478f4b7b1503ee555519 -> 
+  custom:scripting/monoscript/fileName/Chager.cs: 44a3fc1b9cde053fdc48fe9f6d5db2e7 -> 
+  custom:scripting/monoscript/fileName/TMP_TextSelector_A.cs: 347309a09d56e367b188a6978f75b424 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/gunn.cs: aab30c74a7667fdef217ffb7e1872f35 -> 
+  custom:scripting/monoscript/fileName/Spiderbehavior.cs: b23c04a72171da1bfba3c740e359e309 -> 
+  custom:scripting/monoscript/fileName/VertexJitter.cs: d27eb5498e48714a66aece98da065133 -> 
+  custom:scripting/monoscript/fileName/Bullet.cs: 21b72f633b0ae24658c2b58406350175 -> 
+  custom:scripting/monoscript/fileName/adjustpivot.cs: 20efc8e4a113e664b25c006bb635eedb -> 
+  custom:scripting/monoscript/fileName/TextConsoleSimulator.cs: 33fc311abb20b5b0ed8f00e4d86b574e -> 
+  custom:scripting/monoscript/fileName/VertexColorCycler.cs: 5f984ca91cf3609293aecc6bc5641572 -> 
+  custom:scripting/monoscript/fileName/TMP_FrameRateCounter.cs: 46f655df8cb483ac5958307137b1585a -> 
+  custom:scripting/monoscript/fileName/VertexShakeB.cs: a6f78c4fcda1a29a1a1c1baefedba9e7 -> 
+  custom:scripting/monoscript/fileName/TMP_UiFrameRateCounter.cs: b01021aea19247f14a98ab338907956a -> 
+  custom:scripting/monoscript/fileName/end-sp.cs: 9933fbcc6190e2a9171c2ec8808a053e -> 
+  custom:scripting/monoscript/fileName/enemyIsTraggered.cs: edf43e5c33fad5cf7be86604e7f96c62 -> 
+  custom:scripting/monoscript/fileName/TMPro_InstructionOverlay.cs: b626d2270e6ebd5c4311585c18b58d8d -> 
+  custom:scripting/monoscript/fileName/TMP_DigitValidator.cs: ac02af96215ae3951a3cce9e1a8c6085 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/Benchmark01_UGUI.cs: 6148cfe2627b7708298f301788144139 -> 
+  custom:scripting/monoscript/fileName/HurtBehavior.cs: d8d14f9524e3ec31db0c9d9a7c7f6efd -> 
+  custom:scripting/monoscript/fileName/AllyHealth.cs: 0ddabf7f22a5092033f70d462b51f7eb -> 
+  custom:scripting/monoscript/fileName/MouseManager.cs: 6ac4e4e03984271fd1f80dcdcecc1ff0 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 467f6359a6c78145b4e03802ae5d67d9 -> 
+  custom:scripting/monoscript/fileName/Benchmark03.cs: 17cc87e0529ac71d909a946afb47a274 -> 
+  custom:scripting/monoscript/fileName/end.cs: b39d91587c2553fd886ac9cec92f1e80 -> 
