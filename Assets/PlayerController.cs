@@ -9,11 +9,11 @@ public class PlayerController : MonoBehaviour
     public float gravty = -19.6f;
 
     private float xRotation = 0f;
-    private bool isGrounded = true; // 是否在地面上
+    private bool isGrounded = true; // Whether the player is on the ground
     private Rigidbody rb;
-    private bool isTakingDamage = false; // 标记是否正在扣血
+    private bool isTakingDamage = false; // Flag to indicate if the player is taking damage
 
-    private PlayerHealth playerHealth; // 引用 PlayerHealth 脚本
+    private PlayerHealth playerHealth; // Reference to the PlayerHealth script
 
     void Start()
     {
@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         Physics.gravity = new Vector3(0, gravty, 0);
 
-        // 获取 PlayerHealth 组件
+        // Get the PlayerHealth component
         playerHealth = GetComponent<PlayerHealth>();
         if (playerHealth == null)
         {
@@ -31,14 +31,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // 角色移动
+        // Character movement
         float horizontal = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
         float vertical = Input.GetAxis("Vertical") * speed * Time.deltaTime;
 
         Vector3 move = transform.right * horizontal + transform.forward * vertical;
         transform.position += move;
 
-        // 鼠标控制视角
+        // Mouse control for camera view
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
         Camera.main.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         transform.Rotate(Vector3.up * mouseX);
 
-        // 跳跃
+        // Jump
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
         else if (other.transform.tag == "Venom")
         {
             isGrounded = true;
-            if (!isTakingDamage && playerHealth != null) // 确保协程不会重复运行
+            if (!isTakingDamage && playerHealth != null) // Ensure coroutine doesn't run multiple times
             {
                 StartCoroutine(TakeDamageOverTime());
             }
@@ -78,11 +78,11 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator TakeDamageOverTime()
     {
-        isTakingDamage = true; // 标记正在扣血
-        while (isTakingDamage) // 持续扣血，直到玩家离开毒液区域
+        isTakingDamage = true; // Mark that the player is taking damage
+        while (isTakingDamage) // Continuously take damage while in the venom zone
         {
-            playerHealth.TakeDamage(5f); // 每次扣5点血
-            yield return new WaitForSeconds(1f); // 等待1秒
+            playerHealth.TakeDamage(0.5f); // Deduct 0.5 health points per tick
+            yield return new WaitForSeconds(1f); // Wait for 1 second between damage ticks
         }
     }
 
@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.transform.tag == "Venom")
         {
-            isTakingDamage = false; // 标记停止扣血
+            isTakingDamage = false; // Mark to stop taking damage
             Debug.Log("Player left venom zone.");
         }
     }

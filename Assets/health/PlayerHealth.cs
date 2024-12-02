@@ -5,68 +5,70 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float maxHealth = 100f;  // ���Ѫ��
-    public float currentHealth;     // ��ǰѪ��
-    public Slider playerHealthSlider; // ���Ѫ��Slider
-    public Image fillImage; // �����޸�Ѫ����ɫ��Image
+    public float maxHealth = 100f;  // Maximum health
+    public float currentHealth;     // Current health
+    public Slider playerHealthSlider; // Player health slider
+    public Image fillImage; // Image to modify health bar color
 
-    private Coroutine damageCoroutine; // �����洢Э�����ã�����ֹͣЭ��
+    private Coroutine damageCoroutine; // Coroutine to store damage handling for stopping purposes
 
     void Start()
     {
-        // ��ʼ��Ѫ��
+        // Initialize health
         currentHealth = maxHealth;
-        // ����Ѫ�������ֵ�ͳ�ʼֵ
+        // Set health slider's maximum and initial values
         playerHealthSlider.maxValue = maxHealth;
         playerHealthSlider.value = currentHealth;
 
-        // ��ȡѪ������䲿��Image
+        // Get the Image component of the health slider's fill area
         fillImage = playerHealthSlider.fillRect.GetComponent<Image>();
     }
 
     void Update()
     {
-        // ���ݵ�ǰѪ������Ѫ��
+        // Update the slider value according to current health
         playerHealthSlider.value = currentHealth;
 
-        // ���Ѫ��������Ѫ��������ɫ
+        // Change health bar color based on current health
         if (currentHealth <= maxHealth / 2f)
         {
             fillImage.color = Color.red;
         }
         else
         {
-            fillImage.color = Color.white;  // Ĭ����ɫ
+            fillImage.color = Color.white;  // Default color
         }
 
-        // ���Ѫ���Ƿ�Ϊ 0��������Ϸ
+        // Check if health is 0, and end the game
         if (currentHealth <= 0f)
         {
             PlayerDie();
         }
     }
 
-    // ��Ѫ�ķ���
+    // Method to take damage
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);  // ��֤Ѫ��������0
+        currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);  // Ensure health does not drop below 0
     }
+
+    // Method to add health
     public void AddHealth(int amount)
     {
         currentHealth += amount;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth); // 确保血量不超过最大值
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth); // Ensure health does not exceed the maximum value
     }
-    // ������Ϸ�ķ���
-       void PlayerDie()
+
+    // Method to handle player death
+    void PlayerDie()
     {
         Debug.Log("Game Over");
 
-        // 确保时间流动（防止暂停状态影响场景切换）
+        // Ensure time flow (prevent pause state affecting scene switching)
         Time.timeScale = 1;
 
-        // 切换到 GameOverScene
+        // Switch to the GameOverScene
         SceneManager.LoadScene("GameOverScene");
     }
-
 }
