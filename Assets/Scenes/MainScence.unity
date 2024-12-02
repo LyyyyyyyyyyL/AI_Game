@@ -13543,7 +13543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4391718013820517804, guid: a14df274f46c936499869d28652bfd3a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4685656026390460835, guid: a14df274f46c936499869d28652bfd3a, type: 3}
       propertyPath: isInPlayerInAttackTrigger
@@ -13634,7 +13634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f18f93ed8f4e4d4a88de9dd5af818f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalMaterial: {fileID: 2100000, guid: cc610f2f24c6e402a97ac1f1212d3b76, type: 2}
+  originalMaterial: {fileID: 2100000, guid: 586859422c355b64782186d9d38a516b, type: 2}
   hurtMaterial: {fileID: 2100000, guid: cc610f2f24c6e402a97ac1f1212d3b76, type: 2}
   enemyBody: {fileID: 1278368548}
   enemy: {fileID: 1186311091}
@@ -18574,7 +18574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f18f93ed8f4e4d4a88de9dd5af818f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalMaterial: {fileID: 2100000, guid: cc610f2f24c6e402a97ac1f1212d3b76, type: 2}
+  originalMaterial: {fileID: 2100000, guid: 586859422c355b64782186d9d38a516b, type: 2}
   hurtMaterial: {fileID: 2100000, guid: cc610f2f24c6e402a97ac1f1212d3b76, type: 2}
   enemyBody: {fileID: 433032882}
   enemy: {fileID: 1467797880}
@@ -21810,7 +21810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4391718013820517804, guid: a14df274f46c936499869d28652bfd3a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4685656026390460835, guid: a14df274f46c936499869d28652bfd3a, type: 3}
       propertyPath: isInPlayerInAttackTrigger
@@ -22472,7 +22472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3561595236131429116, guid: a14df274f46c936499869d28652bfd3a, type: 3}
       propertyPath: wanderSpeed
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 3561595236131429116, guid: a14df274f46c936499869d28652bfd3a, type: 3}
       propertyPath: zombieGrowl
@@ -22480,11 +22480,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 16741c4cd2158a945a3f6ca24a5e9357, type: 3}
     - target: {fileID: 3561595236131429116, guid: a14df274f46c936499869d28652bfd3a, type: 3}
       propertyPath: wanderJitter
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 3561595236131429116, guid: a14df274f46c936499869d28652bfd3a, type: 3}
       propertyPath: wanderRadius
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4391718013820517804, guid: a14df274f46c936499869d28652bfd3a, type: 3}
       propertyPath: m_Name

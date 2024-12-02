@@ -3,47 +3,46 @@ using UnityEngine.AI;
 
 public class AttackBehaviorSpitterObject : BehaviorNode
 {
-    // 毒液生成时间追踪器和间隔
-    private float lastVenomSpawnTime = 0f; // 上次生成毒液的时间
-    public float venomSpawnInterval = 2f; // 毒液生成的时间间隔（秒）
-    public GameObject enemy;      // 整个敌人对象
-    public GameObject enemyArm;   // 敌人的胳膊
-    public float rotationSpeed;   // 手臂旋转速度，单位：度/秒
-    public int damage = 10;       // 每次扣减的血量
+    // Venom spawn timer and interval
+    private float lastVenomSpawnTime = 0f; // Last venom spawn time
+    public float venomSpawnInterval = 2f; // Interval between venom spawns (seconds)
+    public GameObject enemy;      // The entire enemy object
+    public GameObject enemyArm;   // The enemy's arm
+    public float rotationSpeed;   // Arm rotation speed, in degrees per second
+    public int damage = 10;       // Damage dealt each time
 
-    private Transform targetTransform;  // 存储目标 Transform
-    private NavMeshAgent navMeshAgent;  // 敌人的 NavMeshAgent 组件
-    private PlayerHealth playerHealth; // 存储玩家的血量脚本
-    //private bool isPlayerInTrigger = true; // 标记玩家是否在触发范围内
-    private float lastCheckTime = 0f; // 上次检测的时间
-    public float checkInterval = 1f; // 每秒检测一次
+    private Transform targetTransform;  // Stores the target Transform
+    private NavMeshAgent navMeshAgent;  // Enemy's NavMeshAgent component
+    private PlayerHealth playerHealth; // Player's health script
+    private float lastCheckTime = 0f; // Last check time
+    public float checkInterval = 1f; // Check interval in seconds
 
-    // 新增字段
-    private enemyIsTraggered enemyTriggerScript;  // 用来获取 enemyIsTraggered 脚本
+    // New field
+    private enemyIsTraggered enemyTriggerScript;  // To access enemyIsTraggered script
 
-    // 毒液区域相关
-    public GameObject venomPrefab;    // 毒液区域预制体
-    public float venomLifetime = 5f;  // 毒液区域的存活时间
+    // Venom area related
+    public GameObject venomPrefab;    // Venom area prefab
+    public float venomLifetime = 5f;  // Venom area's lifetime
 
     void Start()
     {
-        Debug.Log("get into the attack");
+        Debug.Log("Entering the attack behavior");
 
-        // 获取 NavMeshAgent 组件
+        // Get NavMeshAgent component
         navMeshAgent = enemy.GetComponent<NavMeshAgent>();
         if (navMeshAgent == null)
         {
             Debug.LogError("Enemy does not have a NavMeshAgent component!");
         }
 
-        // 获取 enemyIsTraggered 脚本
+        // Get enemyIsTraggered script
         enemyTriggerScript = enemy.GetComponent<enemyIsTraggered>();
         if (enemyTriggerScript == null)
         {
             Debug.LogError("Enemy does not have the enemyIsTraggered component!");
         }
 
-        // 查找目标对象
+        // Find target object
         GameObject target = GameObject.FindGameObjectWithTag("Player");
         if (target != null)
         {
@@ -62,53 +61,53 @@ public class AttackBehaviorSpitterObject : BehaviorNode
 
     public override bool Run()
     {
-        // 确保敌人、敌人手臂和 NavMeshAgent 存在
+        // Ensure enemy, enemy's arm, and NavMeshAgent exist
         if (enemy == null || enemyArm == null || navMeshAgent == null || targetTransform == null || playerHealth == null || enemyTriggerScript == null || venomPrefab == null)
         {
             Debug.LogError("Missing required components!");
             return false;
         }
 
-        // 获取 enemyIsTraggered 脚本的 isInPlayerInAttackTrigger 值
+        // Get isInPlayerInAttackTrigger value from enemyIsTraggered script
         bool isPlayerInAttackTrigger = enemyTriggerScript.isInPlayerInAttackTrigger;
 
-        // 旋转手臂
+        // Rotate the arm
         RotateArmOnXAxis();
 
-        // 每秒检测一次
+        // Check every second
         if (Time.time - lastCheckTime >= checkInterval)
         {
             lastCheckTime = Time.time;
 
-            // 如果玩家在攻击范围内
+            // If the player is within attack range
             if (isPlayerInAttackTrigger)
             {
-                // 扣减玩家血量
+                // Deal damage to the player
                 playerHealth.TakeDamage(damage);
                 Debug.Log("Player hit! Remaining health: " + playerHealth.currentHealth);
 
-                // 检查毒液生成的时间间隔
+                // Check venom spawn interval
                 if (Time.time - lastVenomSpawnTime >= venomSpawnInterval)
                 {
                     SpawnVenomAtPlayerPosition();
-                    lastVenomSpawnTime = Time.time; // 更新上次生成毒液的时间
+                    lastVenomSpawnTime = Time.time; // Update last venom spawn time
                 }
             }
             else
             {
-                // 玩家不在范围内，切换到追逐行为
-                Debug.Log("return false");
+                // Player is out of range, switch to chasing behavior
+                Debug.Log("Returning false");
                 return false;
             }
         }
 
-        // 设置 NavMeshAgent 的目标位置
+        // Set the NavMeshAgent's destination
         navMeshAgent.SetDestination(targetTransform.position);
 
-        return true; // 表示行为持续运行
+        return true; // Behavior continues to run
     }
 
-    // 绕 X 轴旋转的方法
+    // Method to rotate the arm on the X-axis
     void RotateArmOnXAxis()
     {
         if (enemyArm != null)
@@ -117,17 +116,16 @@ public class AttackBehaviorSpitterObject : BehaviorNode
         }
     }
 
-    // 在玩家脚下生成毒液区域
+    // Spawn venom at the player's position
     void SpawnVenomAtPlayerPosition()
     {
         if (venomPrefab != null && targetTransform != null)
         {
-            Vector3 spawnPosition = targetTransform.position; // 获取玩家位置
-            spawnPosition.y = 0.5f; // 确保毒液区域生成在地面
-            GameObject venom = Instantiate(venomPrefab, spawnPosition, Quaternion.identity); // 实例化毒液
-            Destroy(venom, venomLifetime); // 毒液区域存活指定时间后销毁
+            Vector3 spawnPosition = targetTransform.position; // Get the player's position
+            spawnPosition.y = 0.5f; // Ensure venom spawns on the ground
+            GameObject venom = Instantiate(venomPrefab, spawnPosition, Quaternion.identity); // Instantiate venom
+            Destroy(venom, venomLifetime); // Destroy venom after the specified lifetime
             Debug.Log("Venom spawned at: " + spawnPosition);
         }
     }
 }
-

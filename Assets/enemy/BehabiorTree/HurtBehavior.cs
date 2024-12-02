@@ -4,24 +4,20 @@ using UnityEngine;
 
 public class HurtBehavior : BehaviorNode
 {
-    public Material originalMaterial;  // 原始材质
-    public Material hurtMaterial;      // 受伤时的材质
-    private Renderer enemyRenderer;    // 用于更改材质的 Renderer
-    public GameObject enemyBody;      // 敌人身体（变色部分）
-    public GameObject enemy;      // 敌人本人
-
+    public Material originalMaterial;  // Original material
+    public Material hurtMaterial;      // Material when injured
+    private Renderer enemyRenderer;    // Renderer used to change the material
+    public GameObject enemyBody;      // Enemy body (part to change color)
+    public GameObject enemy;          // The enemy object itself
 
     private enemyIsTraggered enemyTriggerScript;
-    
 
     // Start is called before the first frame update
     void Start()
     {
-        
-
-        // 获取敌人的 enemyIsTraggered 脚本
+        // Get the enemy's enemyIsTraggered script
         enemyTriggerScript = enemy.GetComponent<enemyIsTraggered>();
-        //敌人的Renderer用来更换颜色的
+        // Get the enemy's Renderer to change the color
         enemyRenderer = enemyBody.GetComponent<Renderer>();
         if (enemyRenderer == null)
         {
@@ -32,7 +28,7 @@ public class HurtBehavior : BehaviorNode
             Debug.LogError("Original material is not assigned!");
         }
 
-        // 检查是否分配了受伤材质
+        // Check if the hurt material is assigned
         if (hurtMaterial == null)
         {
             Debug.LogError("Hurt material is not assigned!");
@@ -41,43 +37,38 @@ public class HurtBehavior : BehaviorNode
         {
             Debug.LogError("Enemy does not have the enemyIsTraggered component!");
         }
-
-
-
     }
 
     // Update is called once per frame
     public override bool Run()
     {
-        Debug.Log("isInBulletTrigger set to"+ enemyTriggerScript.isInBulletTrigger);
-        //Debug.Log("HurtBehavior is working");
-        // 你可以在这里再次施加力，或者只做其他逻辑
+        Debug.Log("isInBulletTrigger set to" + enemyTriggerScript.isInBulletTrigger);
+        // You can apply additional force or logic here if needed
 
+        // If the enemy's renderer and hurt material are not null
         if (enemyRenderer != null && hurtMaterial != null)
         {
             enemyRenderer.material = hurtMaterial;
             Debug.Log("Enemy material changed to hurt material.");
 
-            // 启动协程，在一定时间后恢复原始材质
-            StartCoroutine(RestoreMaterialAfterDelay(0.1f)); // 0.1 秒后恢复材质
+            // Start a coroutine to restore the original material after a delay
+            StartCoroutine(RestoreMaterialAfterDelay(0.1f)); // Restore material after 0.1 seconds
         }
 
+        // Set isInBulletTrigger to false after processing
         enemyTriggerScript.isInBulletTrigger = false;
-        
-        return false;
 
+        return false; // Behavior is complete
     }
 
-
+    // Coroutine to restore the original material after a delay
     private IEnumerator RestoreMaterialAfterDelay(float delay)
     {
-        yield return new WaitForSeconds(delay); // 等待指定时间
+        yield return new WaitForSeconds(delay); // Wait for the specified time
         if (enemyRenderer != null && originalMaterial != null)
         {
             enemyRenderer.material = originalMaterial;
             Debug.Log("Enemy material restored to original.");
         }
     }
-
-
 }

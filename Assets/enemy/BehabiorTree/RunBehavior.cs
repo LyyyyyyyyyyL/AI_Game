@@ -3,20 +3,20 @@ using UnityEngine.AI;
 
 public class RunBehavior : BehaviorNode
 {
-    public GameObject enemy; // 需要移动的敌人
-    public float runSpeed = 5f; // 备用追赶速度
-    public float rotationSpeed = 5f; // 备用旋转速度
-    private Transform enemyTransform; // 缓存敌人的 Transform
-    private Transform playerTransform; // 缓存玩家的 Transform
-    private NavMeshAgent navMeshAgent; // 自动寻路组件
-    
+    public GameObject enemy; // The enemy that needs to be moved
+    public float runSpeed = 5f; // The speed for chasing
+    public float rotationSpeed = 5f; // The speed for rotating
+    private Transform enemyTransform; // Cache for the enemy's Transform
+    private Transform playerTransform; // Cache for the player's Transform
+    private NavMeshAgent navMeshAgent; // NavMeshAgent component for pathfinding
+
     void Start()
     {
-        // 确保敌人对象和NavMeshAgent都已正确初始化
+        // Ensure the enemy object and NavMeshAgent are correctly initialized
         if (enemy != null)
         {
             enemyTransform = enemy.transform;
-            navMeshAgent = enemy.GetComponent<NavMeshAgent>();  // 获取NavMeshAgent组件
+            navMeshAgent = enemy.GetComponent<NavMeshAgent>();  // Get the NavMeshAgent component
 
             if (navMeshAgent == null)
             {
@@ -24,7 +24,7 @@ public class RunBehavior : BehaviorNode
             }
             else
             {
-                navMeshAgent.baseOffset = 1f; // 设置 NavMeshAgent 的基准高度
+                navMeshAgent.baseOffset = 1f; // Set the base offset for NavMeshAgent height
             }
         }
         else
@@ -32,7 +32,7 @@ public class RunBehavior : BehaviorNode
             Debug.LogError("Enemy GameObject not assigned!");
         }
 
-        // 尝试获取玩家的 Transform
+        // Try to find the player’s Transform
         playerTransform = GameObject.FindGameObjectWithTag("Player")?.transform;
 
         if (playerTransform == null)
@@ -40,21 +40,20 @@ public class RunBehavior : BehaviorNode
             Debug.LogError("Player not found! Make sure the player has the 'Player' tag.");
         }
 
-        // 如果NavMeshAgent存在，调整速度和角速度
+        // If the NavMeshAgent exists, adjust speed and angular speed
         if (navMeshAgent != null)
         {
-            navMeshAgent.speed = runSpeed; // 调整运行速度
-            navMeshAgent.angularSpeed = rotationSpeed * 100f; // 转向速度
-            navMeshAgent.angularSpeed = Mathf.Clamp(navMeshAgent.angularSpeed, 0f, 300f); // 确保角速度合理
+            navMeshAgent.speed = runSpeed; // Adjust run speed
+            navMeshAgent.angularSpeed = rotationSpeed * 100f; // Set rotation speed
+            navMeshAgent.angularSpeed = Mathf.Clamp(navMeshAgent.angularSpeed, 0f, 300f); // Ensure angular speed is reasonable
         }
 
-    Debug.Log("Run Behavior initialized.");
-}
-
+        Debug.Log("Run Behavior initialized.");
+    }
 
     public override bool Run()
     {
-        // 检查必要条件
+        // Check essential conditions
         if (enemyTransform == null)
         {
             Debug.LogError("Enemy Transform is not assigned!");
@@ -69,20 +68,20 @@ public class RunBehavior : BehaviorNode
 
         if (navMeshAgent != null)
         {
-            // 使用 NavMeshAgent 自动寻路
+            // Use the NavMeshAgent for pathfinding
             navMeshAgent.speed = runSpeed;
-            navMeshAgent.angularSpeed = rotationSpeed * 100f; // 转换为角速度
+            navMeshAgent.angularSpeed = rotationSpeed * 100f; // Convert to angular speed
             navMeshAgent.destination = playerTransform.position;
 
-            // 返回状态，根据 NavMeshAgent 是否正在移动确定运行成功
+            // Return the status based on whether the NavMeshAgent is still moving
             return !navMeshAgent.isStopped;
         }
         else
         {
-            // 如果 NavMeshAgent 不可用，使用备用逻辑
+            // If NavMeshAgent is unavailable, fallback to manual movement logic
             Vector3 directionToPlayer = playerTransform.position - enemyTransform.position;
 
-            // 移动和旋转
+            // Move and rotate towards the player
             enemyTransform.Translate(directionToPlayer.normalized * runSpeed * Time.deltaTime, Space.World);
             Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
             enemyTransform.rotation = Quaternion.Slerp(enemyTransform.rotation, targetRotation, rotationSpeed * Time.deltaTime);

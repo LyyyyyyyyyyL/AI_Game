@@ -3,40 +3,39 @@ using UnityEngine.AI;
 
 public class AttackBehaviorObject : BehaviorNode
 {
-    public GameObject enemy;      // 整个敌人对象
-    public GameObject enemyArm;   // 敌人的胳膊
-    public float rotationSpeed;   // 手臂旋转速度，单位：度/秒
-    public int damage = 10;       // 每次扣减的血量
+    public GameObject enemy;      // The enemy object
+    public GameObject enemyArm;   // The enemy's arm
+    public float rotationSpeed;   // Arm rotation speed, in degrees per second
+    public int damage = 10;       // Damage dealt per attack
 
-    private Transform targetTransform;  // 存储目标 Transform
-    private NavMeshAgent navMeshAgent;  // 敌人的 NavMeshAgent 组件
-    private PlayerHealth playerHealth; // 存储玩家的血量脚本
-    //private bool isPlayerInTrigger = true; // 标记玩家是否在触发范围内
-    private float lastCheckTime = 0f; // 上次检测的时间
-    public float checkInterval = 1f; // 每秒检测一次
+    private Transform targetTransform;  // Stores the target Transform
+    private NavMeshAgent navMeshAgent;  // The enemy's NavMeshAgent component
+    private PlayerHealth playerHealth; // Stores the player's health script
+    private float lastCheckTime = 0f;  // The time of the last check
+    public float checkInterval = 1f;   // Time interval for checking each second
 
-    // 新增字段
-    private enemyIsTraggered enemyTriggerScript;  // 用来获取 enemyIsTraggered 脚本
+    // New field
+    private enemyIsTraggered enemyTriggerScript;  // Used to get the enemyIsTraggered script
 
     void Start()
     {
-        Debug.Log("get into the attack");
+        Debug.Log("Entering attack behavior");
 
-        // 获取 NavMeshAgent 组件
+        // Get the NavMeshAgent component
         navMeshAgent = enemy.GetComponent<NavMeshAgent>();
         if (navMeshAgent == null)
         {
             Debug.LogError("Enemy does not have a NavMeshAgent component!");
         }
 
-        // 获取 enemyIsTraggered 脚本
+        // Get the enemyIsTraggered script
         enemyTriggerScript = enemy.GetComponent<enemyIsTraggered>();
         if (enemyTriggerScript == null)
         {
             Debug.LogError("Enemy does not have the enemyIsTraggered component!");
         }
 
-        // 查找目标对象
+        // Find the target object
         GameObject target = GameObject.FindGameObjectWithTag("Player");
         if (target != null)
         {
@@ -55,52 +54,51 @@ public class AttackBehaviorObject : BehaviorNode
 
     public override bool Run()
     {
-        // 确保敌人、敌人手臂和 NavMeshAgent 存在
+        // Ensure enemy, enemy arm, NavMeshAgent, target and player health are all present
         if (enemy == null || enemyArm == null || navMeshAgent == null || targetTransform == null || playerHealth == null || enemyTriggerScript == null)
         {
             Debug.LogError("Missing required components!");
             return false;
         }
 
-        // 获取 enemyIsTraggered 脚本的 isInPlayerInAttackTrigger 值
+        // Get the value of isInPlayerInAttackTrigger from enemyIsTraggered script
         bool isPlayerInAttackTrigger = enemyTriggerScript.isInPlayerInAttackTrigger;
-        //Debug.Log("isPlayerInAttackTrigger: " + isPlayerInAttackTrigger);
 
-        // 旋转手臂
+        // Rotate the enemy's arm
         RotateArmOnXAxis();
 
-        // 每秒检测一次
+        // Check every second
         if (Time.time - lastCheckTime >= checkInterval)
         {
             lastCheckTime = Time.time;
 
-            // 如果玩家在攻击范围内
+            // If player is within attack range
             if (isPlayerInAttackTrigger)
             {
-                // 扣减玩家血量
+                // Deal damage to the player
                 playerHealth.TakeDamage(damage);
                 Debug.Log("Player hit! Remaining health: " + playerHealth.currentHealth);
             }
             else
             {
-                // 玩家不在范围内，切换到追逐行为
-
-                Debug.Log("return false");
+                // If player is out of range, switch to pursuit behavior
+                Debug.Log("Player out of attack range, returning false.");
                 return false;
             }
         }
 
-        // 设置 NavMeshAgent 的目标位置
+        // Set the destination for the NavMeshAgent (pursue the player)
         navMeshAgent.SetDestination(targetTransform.position);
 
-        return true; // 表示行为持续运行
+        return true; // Behavior continues
     }
 
-    // 绕 X 轴旋转的方法
+    // Method to rotate the arm around the X axis
     void RotateArmOnXAxis()
     {
         if (enemyArm != null)
         {
+            // Rotate arm around the X axis
             enemyArm.transform.Rotate(Vector3.right, rotationSpeed * Time.deltaTime, Space.Self);
         }
     }

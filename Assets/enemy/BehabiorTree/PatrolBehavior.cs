@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class PatrolBehavior : BehaviorNode
 {
-    public float wanderSpeed = 5f;  // 移动速度，单位为米/秒
-    public float wanderRadius = 5f;  // 徘徊半径
-    public float wanderJitter = 0.2f;  // 随机抖动幅度
-    private Transform enemyTransform;  // 用来存储敌人的 Transform
-    public GameObject enemy;  // 需要控制的敌人
-    public AudioClip zombieGrowl;  // 存储僵尸的吼叫声
-    private AudioSource audioSource;  // 用来播放声音的 AudioSource
+    public float wanderSpeed = 5f;  // Movement speed in meters per second
+    public float wanderRadius = 5f;  // Radius of wandering
+    public float wanderJitter = 0.2f;  // Random jitter magnitude
+    private Transform enemyTransform;  // Stores the enemy's Transform
+    public GameObject enemy;  // The enemy to be controlled
+    public AudioClip zombieGrowl;  // Stores the zombie growl sound
+    private AudioSource audioSource;  // Used to play sound
 
-    private Vector3 wanderTarget;  // 当前徘徊目标
+    private Vector3 wanderTarget;  // Current wandering target
 
     void Start()
     {
@@ -23,20 +23,20 @@ public class PatrolBehavior : BehaviorNode
             Debug.LogError("Enemy GameObject not assigned!");
         }
 
-        // 获取敌人对象的 AudioSource 组件
+        // Get the AudioSource component of the enemy
         audioSource = enemy.GetComponent<AudioSource>();
         if (audioSource == null)
         {
-            // 如果没有找到 AudioSource 组件，则动态添加一个
+            // If AudioSource is not found, dynamically add one
             audioSource = enemy.AddComponent<AudioSource>();
         }
 
-        // 设置音效文件
+        // Set the sound clip
         if (zombieGrowl != null)
         {
             audioSource.clip = zombieGrowl;
-            audioSource.loop = false;  // 设置不循环播放
-            // 每隔 10 秒播放一次吼叫声
+            audioSource.loop = false;  // Set not to loop
+            // Play the growl sound every 10 seconds
             InvokeRepeating("PlayGrowl", 0f, 10f);
         }
         else
@@ -44,63 +44,63 @@ public class PatrolBehavior : BehaviorNode
             Debug.LogError("Zombie growl sound not assigned!");
         }
 
-        // 初始化徘徊目标
+        // Initialize wander target
         wanderTarget = enemyTransform.position;
     }
 
     public override bool Run()
     {
-        // 打印敌人当前位置，用于调试
+        // Debugging: Print enemy current position
         //Debug.Log("Enemy Current Position: " + enemyTransform.position);
 
-        // 生成新的徘徊目标
+        // Generate a new wander target
         Wander();
 
-        // 让敌人沿着当前位置缓慢前进
+        // Move the enemy slowly towards the target
         MoveEnemyForward();
 
-        // 返回 true，表示徘徊行为持续进行
+        // Return true, indicating the patrol behavior continues
         return true;
     }
 
-    // 生成新的徘徊目标点
+    // Generate a new wander target point
     void Wander()
     {
-        // 生成一个随机的抖动向量
+        // Generate a random jitter displacement vector
         Vector3 randomDisplacement = new Vector3(
             Random.Range(-1f, 1f),
-            0,  // 在2D平面或3D环境中，y轴不需要变化
+            0,  // No change in the y-axis for 2D or 3D environments
             Random.Range(-1f, 1f)
         ) * wanderJitter;
 
-        // 添加随机抖动到徘徊目标
+        // Add jitter to the wander target
         wanderTarget += randomDisplacement;
 
-        // 将徘徊目标限制到圆内
+        // Constrain the wander target to a circle
         wanderTarget = (wanderTarget - enemyTransform.position).normalized * wanderRadius + enemyTransform.position;
     }
 
-    // 让敌人沿着当前位置缓慢前进并面向目标
+    // Move the enemy slowly forward and face the target
     void MoveEnemyForward()
     {
-        // 使敌人沿着它的前方方向移动，移动速度为 wanderSpeed
+        // Move the enemy towards the target position with wanderSpeed
         enemyTransform.position = Vector3.MoveTowards(enemyTransform.position, wanderTarget, wanderSpeed * Time.deltaTime);
 
-        // 计算敌人当前方向
+        // Calculate the direction towards the target
         Vector3 directionToTarget = wanderTarget - enemyTransform.position;
 
-        // 如果目标位置不在当前面前，进行旋转
-        if (directionToTarget.sqrMagnitude > 0.1f)  // 防止除零错误
+        // Rotate the enemy if the target is not in front
+        if (directionToTarget.sqrMagnitude > 0.1f)  // Avoid division by zero error
         {
-            // 计算新的旋转角度
+            // Calculate the new rotation angle
             Quaternion targetRotation = Quaternion.LookRotation(directionToTarget);
 
-            // 让敌人平滑旋转到目标方向
+            // Smoothly rotate the enemy towards the target direction
             enemyTransform.rotation = Quaternion.RotateTowards(enemyTransform.rotation, targetRotation, 360f * Time.deltaTime);
         }
     }
 
-    // 播放僵尸的吼叫声
+    // Play the zombie growl sound
     void PlayGrowl()
     {
         audioSource.Play();
